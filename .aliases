@@ -6,7 +6,6 @@ alias ls='ls -GFh'
 alias ll='ls -l'
 alias du='\du -hd1'
 alias lsd='\ls -dG */'
-alias myIP='ipconfig getifaddr en0'
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
 alias starwars='telnet towel.blinkenlights.nl'
