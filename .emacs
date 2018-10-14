@@ -7,7 +7,11 @@
 (package-initialize) ;; You might already have this line
 ;;(require 'xcscope)
 ;;(cscope-setup)
-
+(setq exec-path (append exec-path '("/usr/local/bin")))
+(setq exec-path (append exec-path '("/usr/local/sbin")))
+(setenv "PATH" (shell-command-to-string "/bin/bash -c 'echo -n $PATH'"))
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 (setq column-number-mode t)
 ;;Erc settings:
