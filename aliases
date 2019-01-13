@@ -4,7 +4,7 @@
 
 alias ls='ls -GFh'
 alias ll='ls -l'
-alias du='\du -hd1'
+#alias du='\du -hd1'
 alias lsd='\ls -dG */'
 alias g+++="g++ -std=c++14 -Wall -Werror -Wvla -Wextra -pedantic -O3"
 
