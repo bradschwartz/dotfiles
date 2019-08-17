@@ -1,0 +1,12 @@
+{
+    "window.zoomLevel": 1,
+
+    "explorer.openEditors.visible": 0,
+    
+    "workbench.editor.tabSizing": "shrink",
+
+    "files.associations": {
+        "Brewfile": "ruby"
+    },
+    "explorer.confirmDelete": false
+}
