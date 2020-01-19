@@ -2,11 +2,26 @@
     "window.zoomLevel": 1,
 
     "explorer.openEditors.visible": 0,
-    
+    "explorer.confirmDelete": false,
+
     "workbench.editor.tabSizing": "shrink",
 
     "files.associations": {
         "Brewfile": "ruby"
     },
-    "explorer.confirmDelete": false
+
+    "editor.scrollBeyondLastLine": false,
+    "editor.formatOnSave": false,
+
+    "go.lintOnSave": "off",
+    "[go]":{
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "latex-workshop.view.pdf.viewer": "tab",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true
 }

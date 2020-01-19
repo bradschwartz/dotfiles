@@ -16,6 +16,7 @@ export VIEWER=emacs;
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_CONFIG_FILE=$HOME/.pip.conf
+eval "$(pyenv init -)"
 
 PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH
@@ -45,3 +46,6 @@ complete -C  '/usr/local/bin/aws_completer' aws
 export HOMEBREW_AUTO_UPDATE_SECS=3600
 export HOMEBREW_NO_ANALYTICS=1
 export SPARK_SHELL=/usr/local/opt/apache-spark/libexec/
+
+# Golang
+export PATH=$PATH:$(go env GOPATH)/bin
