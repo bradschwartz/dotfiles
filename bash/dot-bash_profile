@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
-
 # System Variables
-
 stty -ixon # Forward bash search
 shopt -s direxpand
 
-export PS1='[\W]\$ '
-#export PS1='[\W\e[0;32m$(__git_ps1)\e[m]\$ '
+# export PS1='[\W]\$ '
+function _update_ps1() {
+    local modules="cwd,git,exit"
+    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -mode compatible -error $?)"
+}
+PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%d/%m/%y %T '
 
-export EDITOR=emacs;
-export VIEWER=emacs;
+export EDITOR=emacs
+export VIEWER=emacs
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_CONFIG_FILE=$HOME/.pip.conf
@@ -22,13 +25,11 @@ PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH
 
 # Source necessary files
-for f in $HOME/{.aliases,.brew_credentials,.twitter/credentials};do
-    if [ -e "$f" ];then
-       . "$f"
+for f in $HOME/{.aliases,.brew_credentials,.twitter/credentials}; do
+    if [ -e "$f" ]; then
+        . "$f"
     fi
 done
-
-
 
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -37,10 +38,10 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 BREW_COMPLETE=/usr/local/etc/bash_completion.d
 [[ -r "$BREW_COMPLETE/git-completion.bash" ]] && . $BREW_COMPLETE/git-completion.bash
 [[ -r "$BREW_COMPLETE/git-prompt.bash" ]] && . $BREW_COMPLETE/git-prompt.sh
-# [[ -r "$BREW_COMPLETE/brew" ]] && . $BREW_COMPLETE/brew
-# [[ -r "$BREW_COMPLETE/brew-services" ]] && . $BREW_COMPLETE/brew-services
+[[ -r "$BREW_COMPLETE/brew" ]] && . $BREW_COMPLETE/brew
+[[ -r "$BREW_COMPLETE/brew-services" ]] && . $BREW_COMPLETE/brew-services
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-complete -C  '/usr/local/bin/aws_completer' aws
+complete -C '/usr/local/bin/aws_completer' aws
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
