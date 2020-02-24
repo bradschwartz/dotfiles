@@ -25,14 +25,10 @@ PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH
 
 # Source necessary files
-for f in $HOME/{.aliases,.brew_credentials,.twitter/credentials}; do
-    if [ -e "$f" ]; then
-        . "$f"
-    fi
-done
+[[ -r "$HOME/.aliases" ]] && . "$HOME/.aliases"
 
 # Java settings
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
 
 # Bash
 BREW_COMPLETE=/usr/local/etc/bash_completion.d
@@ -40,8 +36,8 @@ BREW_COMPLETE=/usr/local/etc/bash_completion.d
 [[ -r "$BREW_COMPLETE/git-prompt.bash" ]] && . $BREW_COMPLETE/git-prompt.sh
 [[ -r "$BREW_COMPLETE/brew" ]] && . $BREW_COMPLETE/brew
 [[ -r "$BREW_COMPLETE/brew-services" ]] && . $BREW_COMPLETE/brew-services
+[[ -r "$BREW_COMPLETE/aws_bash_completer" ]] && . $BREW_COMPLETE/aws_bash_completer
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-complete -C '/usr/local/bin/aws_completer' aws
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
@@ -49,4 +45,6 @@ export HOMEBREW_NO_ANALYTICS=1
 export SPARK_SHELL=/usr/local/opt/apache-spark/libexec/
 
 # Golang
+export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
+complete -C /Users/Brad/go/bin/gocomplete go
