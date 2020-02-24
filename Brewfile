@@ -3,10 +3,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
 # Engine for large-scale data processing
 brew "apache-spark"
 # Official Amazon AWS command-line interface
@@ -15,34 +11,32 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.1+
 brew "bash-completion@2"
-# Cross-platform make
-brew "cmake"
+# Command-line JavaScript / TypeScript engine
+brew "deno"
 # GNU Emacs text editor
-brew "emacs"
-# Command-line tool to interact with exercism.io
-brew "exercism"
+brew "emacs", restart_service: true
 # Distributed revision control system
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Make JSON greppable
+brew "gron"
 # GNU utilities for networking
 brew "inetutils"
-# Extendable open source continuous integration server
-brew "jenkins"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Java-based project management
 brew "maven"
 # Platform built on V8 to build network applications
 brew "node"
+# Python version management
+brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
-brew "python@2"
-# Messaging broker
-brew "rabbitmq"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
-# Build tool for Scala projects
-brew "sbt"
+brew "python"
+# Command-line YAML and XML processor that wraps jq
+brew "python-yq"
+# Safe, concurrent, practical language
+brew "rust"
 # JVM-based programming language
 brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -55,9 +49,9 @@ brew "tcl-tk"
 brew "tree"
 cask "calibre"
 cask "docker"
+cask "firefox"
+cask "iterm2"
 cask "java"
-cask "mactex"
-cask "notion"
 cask "qbittorrent"
 cask "slack"
 cask "spectacle"
@@ -66,4 +60,5 @@ cask "sublime-merge"
 cask "sublime-text"
 cask "tor-browser"
 cask "vlc"
+cask "vscodium"
 cask "xquartz"
