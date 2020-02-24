@@ -29,6 +29,8 @@ brew "jq"
 brew "maven"
 # Platform built on V8 to build network applications
 brew "node"
+# Beautiful and useful low-latency prompt for your shell
+brew "powerline-go"
 # Python version management
 brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
@@ -53,8 +55,8 @@ cask "firefox"
 cask "iterm2"
 cask "java"
 cask "qbittorrent"
+cask "rectangle"
 cask "slack"
-cask "spectacle"
 cask "spotify"
 cask "sublime-merge"
 cask "sublime-text"
