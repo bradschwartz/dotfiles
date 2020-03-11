@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo="${1}"
+code_dir="${HOME}/code"
+
+org="$(basename $(dirname ${repo}))"
+
+clone_loc="${code_dir}/${org}"
+
+mkdir -p "${clone_loc}"
+cd "${clone_loc}"
+
+git clone "${repo}"

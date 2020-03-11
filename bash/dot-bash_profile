@@ -24,6 +24,7 @@ export PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # Source necessary files
 [[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
+export PATH="${HOME}/bin:${PATH}"
 
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
