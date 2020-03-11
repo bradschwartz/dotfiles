@@ -4,9 +4,8 @@
 stty -ixon # Forward bash search
 shopt -s direxpand
 
-# export PS1='[\W]\$ '
 function _update_ps1() {
-    local modules="cwd,git,exit"
+    local modules="cwd,venv,git,exit"
     PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -mode compatible -error $?)"
 }
 PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
@@ -21,23 +20,18 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_CONFIG_FILE=$HOME/.pip.conf
 eval "$(pyenv init -)"
 
-PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
-export PATH
+export PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # Source necessary files
-[[ -r "$HOME/.aliases" ]] && . "$HOME/.aliases"
+[[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
 
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
 
 # Bash
-BREW_COMPLETE=/usr/local/etc/bash_completion.d
-[[ -r "$BREW_COMPLETE/git-completion.bash" ]] && . $BREW_COMPLETE/git-completion.bash
-[[ -r "$BREW_COMPLETE/git-prompt.bash" ]] && . $BREW_COMPLETE/git-prompt.sh
-[[ -r "$BREW_COMPLETE/brew" ]] && . $BREW_COMPLETE/brew
-[[ -r "$BREW_COMPLETE/brew-services" ]] && . $BREW_COMPLETE/brew-services
-[[ -r "$BREW_COMPLETE/aws_bash_completer" ]] && . $BREW_COMPLETE/aws_bash_completer
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# https://stackoverflow.com/a/14970926
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -e "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600

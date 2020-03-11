@@ -13,15 +13,17 @@
     "editor.scrollBeyondLastLine": false,
     "editor.formatOnSave": false,
 
-    "go.lintOnSave": "off",
+    "go.lintOnSave": "file",
+    "go.lintTool": "golint",
     "[go]":{
         "editor.insertSpaces": false,
         "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": false
         }
     },
     "latex-workshop.view.pdf.viewer": "tab",
     "go.formatTool": "goimports",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "workbench.settings.editor": "json"
 }
