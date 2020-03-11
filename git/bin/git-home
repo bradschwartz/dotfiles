@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-remote="${1:-$(git remote get-url origin)}"
+remote="$(git remote get-url ${1:-origin})"
 open "${remote}"
