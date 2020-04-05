@@ -5,8 +5,8 @@ stty -ixon # Forward bash search
 shopt -s direxpand
 
 function _update_ps1() {
-    local modules="cwd,venv,git,exit"
-    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -mode compatible -error $?)"
+    local modules="cwd,venv,git"
+    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -error $?)"    
 }
 PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
