@@ -6,7 +6,7 @@ shopt -s direxpand
 
 function _update_ps1() {
     local modules="cwd,venv,git"
-    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -error $?)"    
+    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -error $?)"
 }
 PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
@@ -27,12 +27,12 @@ export PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="${HOME}/bin:${PATH}"
 
 # Java settings
-export JAVA_HOME=$(/usr/libexec/java_home -v 13.0.2)
+export JAVA_HOME=$(/usr/libexec/java_home -v 14)
 
 # Bash
 # https://stackoverflow.com/a/14970926
 export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -e "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
@@ -43,3 +43,6 @@ export SPARK_SHELL=/usr/local/opt/apache-spark/libexec/
 export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
 complete -C /Users/Brad/go/bin/gocomplete go
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
