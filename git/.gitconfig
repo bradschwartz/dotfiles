@@ -24,3 +24,5 @@
 	untracked = red
 [url "https://"]
 	insteadOf = git://
+[core]
+	excludesfile = /Users/Brad/.config/git/ignore
