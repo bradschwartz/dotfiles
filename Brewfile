@@ -1,5 +1,7 @@
+tap "bradschwartz/bradschwartz", "https://github.com/bradschwartz/homebrew-bradschwartz.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -11,6 +13,12 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.1+
 brew "bash-completion@2"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Bash and Zsh completion for Cargo
+brew "cargo-completion"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Command-line JavaScript / TypeScript engine
 brew "deno"
 # GNU Emacs text editor
@@ -37,8 +45,8 @@ brew "pyenv"
 brew "python"
 # Command-line YAML and XML processor that wraps jq
 brew "python-yq"
-# Safe, concurrent, practical language
-brew "rust"
+# The Rust toolchain installer
+brew "rustup-init"
 # JVM-based programming language
 brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -49,9 +57,17 @@ brew "stow"
 brew "tcl-tk"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Internet file retriever
+brew "wget"
+# Subcommands for git
+brew "bradschwartz/bradschwartz/git-subcommands"
+cask "basictex"
 cask "calibre"
+cask "discord"
 cask "docker"
 cask "firefox"
+cask "font-inconsolata-for-powerline"
+cask "font-menlo-for-powerline"
 cask "iterm2"
 cask "java"
 cask "qbittorrent"
@@ -64,3 +80,4 @@ cask "tor-browser"
 cask "vlc"
 cask "vscodium"
 cask "xquartz"
+cask "zoomus"
