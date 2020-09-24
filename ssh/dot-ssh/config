@@ -1,0 +1,26 @@
+Host *
+	AddKeysToAgent yes
+	UseKeychain yes
+ 
+Host CAEN
+	#Host caen-vnc-vm01.engin.umich.edu
+	HostName login.engin.umich.edu
+	User baschwa
+	#Compression yes
+	#wont work due to new ssh binaries
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials yes
+	#GSSAPITrustDNS yes
+
+Host ATLAS
+	HostName umt3int04.physics.lsa.umich.edu
+	User baschwa
+	#Compression yes
+	#wont work due to new ssh binaries
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials yes
+	#GSSAPITrustDNS yes
+
+Host pi
+	User pi
+	Hostname raspberrypi.local
