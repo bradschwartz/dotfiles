@@ -24,12 +24,19 @@
     },
     "latex-workshop.view.pdf.viewer": "tab",
     "go.formatTool": "goimports",
-    "go.useLanguageServer": false,
+    "go.useLanguageServer": true,
     "workbench.settings.editor": "json",
     "explorer.confirmDragAndDrop": false,
-    "workbench.colorTheme": "Default Light+",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Default Dark+",
+    "workbench.preferredHighContrastColorTheme": "Default Light+",
     "editor.rulers": [
         80,
         120,
-    ]
+    ],
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Default Light+",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
