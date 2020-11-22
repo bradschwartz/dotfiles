@@ -5,13 +5,11 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# Engine for large-scale data processing
-brew "apache-spark"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Programmable completion for Bash 4.1+
+# Programmable completion for Bash 4.2+
 brew "bash-completion@2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -19,8 +17,10 @@ brew "bat"
 brew "cargo-completion"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Command-line JavaScript / TypeScript engine
+# Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 # GNU Emacs text editor
 brew "emacs", restart_service: true
 # Distributed revision control system
@@ -29,23 +29,35 @@ brew "git"
 brew "go"
 # Make JSON greppable
 brew "gron"
+# Command-line benchmarking tool
+brew "hyperfine"
 # GNU utilities for networking
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Quantify abundances of transcripts from RNA-Seq data
+brew "kallisto"
+# Development kit for the Java programming language
+brew "openjdk"
 # Java-based project management
 brew "maven"
+# Bash completion for Maven
+brew "maven-completion"
+# Port scanning utility for large networks
+brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
 # Beautiful and useful low-latency prompt for your shell
 brew "powerline-go"
 # Python version management
 brew "pyenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python"
 # Command-line YAML and XML processor that wraps jq
 brew "python-yq"
-# The Rust toolchain installer
+# Software environment for statistical computing
+brew "r"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Rust toolchain installer
 brew "rustup-init"
 # JVM-based programming language
 brew "scala"
@@ -61,6 +73,7 @@ brew "tree"
 brew "wget"
 # Subcommands for git
 brew "bradschwartz/bradschwartz/git-subcommands"
+cask "adoptopenjdk"
 cask "basictex"
 cask "calibre"
 cask "discord"
@@ -68,14 +81,13 @@ cask "docker"
 cask "firefox"
 cask "font-inconsolata-for-powerline"
 cask "font-menlo-for-powerline"
-cask "iterm2"
+cask "intellij-idea-ce"
 cask "java"
+cask "postman"
 cask "qbittorrent"
 cask "rectangle"
 cask "slack"
 cask "spotify"
-cask "sublime-merge"
-cask "sublime-text"
 cask "tor-browser"
 cask "vlc"
 cask "vscodium"

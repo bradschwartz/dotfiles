@@ -18,3 +18,11 @@ Tired of my personal settings? Remove them with:
 ```bash
 stow -D bash
 ```
+
+### Brewfile
+
+Brewfile is generated using:
+
+```bash
+brew bundle dump --all --verbose --force --describe
+```
