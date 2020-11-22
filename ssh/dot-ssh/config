@@ -22,5 +22,6 @@ Host ATLAS
 	#GSSAPITrustDNS yes
 
 Host pi
-	User pi
-	Hostname raspberrypi.local
+	User ubuntu
+	# get with `hostname --fqdn` when actually on box
+	Hostname ubuntu.home
