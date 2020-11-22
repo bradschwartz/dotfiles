@@ -27,7 +27,7 @@ export PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="${HOME}/bin:${PATH}"
 
 # Java settings
-export JAVA_HOME=$(/usr/libexec/java_home -v 14)
+export JAVA_HOME=$(/usr/libexec/java_home -v 15)
 
 # Bash
 # https://stackoverflow.com/a/14970926
