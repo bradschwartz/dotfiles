@@ -26,3 +26,5 @@
 	insteadOf = git://
 [core]
 	excludesfile = /Users/Brad/.config/git/ignore
+[pull]
+	rebase = false

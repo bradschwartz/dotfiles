@@ -1,21 +1,16 @@
 {
     "window.zoomLevel": 0,
-
     "explorer.openEditors.visible": 0,
     "explorer.confirmDelete": false,
-
     "workbench.editor.tabSizing": "shrink",
-
     "files.associations": {
         "Brewfile": "ruby"
     },
-
     "editor.scrollBeyondLastLine": false,
     "editor.formatOnSave": false,
-
     "go.lintOnSave": "file",
     "go.lintTool": "golint",
-    "[go]":{
+    "[go]": {
         "editor.insertSpaces": false,
         "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
@@ -40,5 +35,12 @@
     },
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "[shellscript]": {
+        "files.eol": "auto",
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "latex-workshop.message.update.show": false
 }
