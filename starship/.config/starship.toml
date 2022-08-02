@@ -1,0 +1,22 @@
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 2
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+untracked = "?${count}"
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true

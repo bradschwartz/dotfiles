@@ -4,11 +4,7 @@
 stty -ixon # Forward bash search
 shopt -s direxpand
 
-function _update_ps1() {
-    local modules="cwd,venv,git"
-    PS1="$(command powerline-go -condensed -cwd-max-depth 1 -modules ${modules} -error $?)"
-}
-PROMPT_COMMAND="history -a;history -r;_update_ps1; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a;history -r; $PROMPT_COMMAND"
 
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%d/%m/%y %T '
@@ -50,3 +46,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 . "${BASH_COMPLETION_COMPAT_DIR}/cargo"
 
 complete -C /usr/local/bin/terraform terraform
+
+eval "$(starship init bash)"

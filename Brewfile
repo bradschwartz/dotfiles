@@ -1,4 +1,6 @@
 tap "bradschwartz/tap", "https://github.com/bradschwartz/homebrew-tap.git"
+tap "cue-lang/tap"
+tap "dagger/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -6,8 +8,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# Tool Command Language
-brew "tcl-tk"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -16,10 +16,10 @@ brew "bash"
 brew "bash-completion@2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Bash and Zsh completion for Cargo
-brew "cargo-completion"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Message bus system, providing inter-application communication
+brew "dbus"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Functional metaprogramming aware language built on Erlang VM
@@ -28,6 +28,8 @@ brew "elixir"
 brew "emacs", restart_service: true
 # Collection of GNU find, xargs, and locate
 brew "findutils"
+# Command-line tools for fly.io services
+brew "flyctl"
 # Distributed revision control system
 brew "git"
 # Open source programming language to build simple/reliable/efficient software
@@ -56,14 +58,24 @@ brew "maven-completion"
 brew "nmap"
 # Platform built on V8 to build network applications
 brew "node"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Python dependency management tool
+brew "pipenv"
 # Object-relational database system
 brew "postgresql", restart_service: true
+# Object-relational database system
+brew "postgresql@13"
 # Beautiful and useful low-latency prompt for your shell
 brew "powerline-go"
 # Python version management
 brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
 # Command-line YAML and XML processor that wraps jq
 brew "python-yq"
+# Tool Command Language
+brew "tcl-tk"
 # Software environment for statistical computing
 brew "r"
 # Search tool like grep and The Silver Searcher
@@ -76,23 +88,30 @@ brew "rustup-init"
 brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Internet file retriever
 brew "wget"
+# General-purpose lossless data-compression library
+brew "zlib"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
+# CUE is an open source data constraint language which aims to simplify tasks involving defining and using data.
+brew "cue-lang/tap/cue"
+# Dagger is a programmable deployment system.
+brew "dagger/tap/dagger"
 # Consul
 brew "hashicorp/tap/consul"
+# JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
-# Compact TeX distribution as alternative to the full TeX Live / MacTeX
-cask "basictex"
 # E-books management software
 cask "calibre"
-# Free universal database tool and SQL client
-cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
@@ -101,21 +120,21 @@ cask "docker"
 cask "firefox"
 cask "font-inconsolata-for-powerline"
 cask "font-menlo-for-powerline"
-# IDE for Java development - community edition
-cask "intellij-idea-ce"
+# Online meetings, desktop sharing, and video conferencing
+cask "gotomeeting"
 cask "java"
-# Collaboration platform for API development
-cask "postman"
+# Full TeX Live distribution without GUI applications
+cask "mactex-no-gui"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
 cask "slack"
-# Music streaming service
-cask "spotify"
 # Web browser focusing on security
 cask "tor-browser"
+# Open-source code editor
+cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 # Binary releases of VS Code without MS branding/telemetry/licensing
@@ -124,5 +143,3 @@ cask "vscodium"
 cask "xquartz"
 # Video communication and virtual meeting platform
 cask "zoom"
-# Temporary makeshift alias for the video communication tool Zoom
-cask "zoomus"
