@@ -42,5 +42,6 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "latex-workshop.message.update.show": false
+    "latex-workshop.message.update.show": false,
+    "workbench.colorTheme": "Default Light+"
 }
