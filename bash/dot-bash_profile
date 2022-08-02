@@ -48,3 +48,5 @@ complete -C /Users/Brad/go/bin/gocomplete go
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 . "${BASH_COMPLETION_COMPAT_DIR}/cargo"
+
+complete -C /usr/local/bin/terraform terraform
