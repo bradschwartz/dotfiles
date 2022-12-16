@@ -34,6 +34,14 @@
     },
     {
         "key": "cmd+9",
-        "command": "workbench.action.openEditorAtIndex9",
+        "command": "workbench.action.lastEditorInGroup",
+    },
+    {
+        "key": "cmd+k cmd+l",
+        "command": "editor.action.transformToLowercase",
+    },
+    {
+        "key": "cmd+k cmd+u",
+        "command": "editor.action.transformToUppercase",
     }
 ]

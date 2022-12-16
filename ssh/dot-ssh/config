@@ -1,27 +1,10 @@
 Host *
-	AddKeysToAgent yes
-	UseKeychain yes
- 
-Host CAEN
-	#Host caen-vnc-vm01.engin.umich.edu
-	HostName login.engin.umich.edu
-	User baschwa
-	#Compression yes
-	#wont work due to new ssh binaries
-	GSSAPIAuthentication yes
-	GSSAPIDelegateCredentials yes
-	#GSSAPITrustDNS yes
+  AddKeysToAgent yes
+  UseKeychain yes
+  ServerAliveInterval 45
+  ServerAliveCountMax 5
 
-Host ATLAS
-	HostName umt3int04.physics.lsa.umich.edu
-	User baschwa
-	#Compression yes
-	#wont work due to new ssh binaries
-	GSSAPIAuthentication yes
-	GSSAPIDelegateCredentials yes
-	#GSSAPITrustDNS yes
-
-Host pi
-	User ubuntu
-	# get with `hostname --fqdn` when actually on box
-	Hostname ubuntu.home
+# https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+Host github.com
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519da

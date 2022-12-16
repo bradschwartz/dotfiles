@@ -3,8 +3,6 @@
 # Please adapt and uncomment the following lines:
 	name = bradschwartz
 	email = baschwartz95@gmail.com
-[gui]
-	recentrepo = /Users/Brad/Documents/School/Fall_2017/EECS_492/Homework/Assignment_4
 [color]
 	branch = auto
 	diff = auto
@@ -22,11 +20,18 @@
 	added = green
 	changed = yellow
 	untracked = red
-[url "https://"]
-	insteadOf = git://
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [core]
-	excludesfile = /Users/Brad/.config/git/ignore
+	excludesfile = ~/.config/git/ignore
 [pull]
 	rebase = false
 [init]
 	defaultBranch = main
+[alias]
+	fix = "commit --amend --no-edit"
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

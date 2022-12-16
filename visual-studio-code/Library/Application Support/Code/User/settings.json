@@ -1,5 +1,5 @@
 {
-    "window.zoomLevel": 0,
+    "search.collapseResults": "alwaysCollapse",
     "explorer.openEditors.visible": 0,
     "explorer.confirmDelete": false,
     "workbench.editor.tabSizing": "shrink",
@@ -18,7 +18,7 @@
         }
     },
     "latex-workshop.view.pdf.viewer": "tab",
-    "go.formatTool": "goimports",
+    "go.formatTool": "default",
     "go.useLanguageServer": true,
     "workbench.settings.editor": "json",
     "explorer.confirmDragAndDrop": false,
@@ -42,6 +42,24 @@
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "[ruby]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "latex-workshop.message.update.show": false,
+    "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
+    "cmake.configureOnOpen": true,
+    "redhat.telemetry.enabled": true,
+    "markdown-preview-enhanced.liveUpdate": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home",
+    "workbench.startupEditor": "none",
+    "go.toolsManagement.autoUpdate": true,
+    "groovyLint.basic.loglevel": "error",
+    "terraform.languageServer.enable": true,
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
     "workbench.colorTheme": "Default Light+"
 }

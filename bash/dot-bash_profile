@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
 
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export BREW_PREFIX=$(brew --prefix)
+
 # System Variables
 stty -ixon # Forward bash search
 shopt -s direxpand
 
+eval "$(starship init bash)"
 PROMPT_COMMAND="history -a;history -r; $PROMPT_COMMAND"
 
 export HISTCONTROL=ignoredups
 export HISTTIMEFORMAT='%d/%m/%y %T '
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 export EDITOR=emacs
 export VIEWER=emacs
@@ -17,34 +24,58 @@ export PIP_CONFIG_FILE=$HOME/.pip.conf
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH="/usr/local/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # Source necessary files
 [[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
 export PATH="${HOME}/bin:${PATH}"
 
 # Java settings
-export JAVA_HOME=$(/usr/libexec/java_home -v 15)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+# Ruby
+eval "$(rbenv init - bash)"
 
 # Bash
 # https://stackoverflow.com/a/14970926
-export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
+[[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
 export HOMEBREW_NO_ANALYTICS=1
-export SPARK_SHELL=/usr/local/opt/apache-spark/libexec/
+export SPARK_SHELL=${BREW_PREFIX}/opt/apache-spark/libexec/
+export HOMEBREW_BAT=1
 
 # Golang
 export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
-complete -C /Users/Brad/go/bin/gocomplete go
+complete -C ~/go/bin/gocomplete go
 
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-. "${BASH_COMPLETION_COMPAT_DIR}/cargo"
+# Hashicorp
+complete -C ${BREW_PREFIX}/bin/terraform terraform
+complete -C ${BREW_PREFIX}/bin/vault vault
+complete -C ${BREW_PREFIX}/bin/packer packer
 
-complete -C /usr/local/bin/terraform terraform
+eval "$(ssh-agent -s)" >/dev/null 2>&1
+ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1
 
-eval "$(starship init bash)"
+# AWS
+## awscli v2 paginates by default, disable
+export AWS_PAGER=""
+
+# Created by `pipx`
+export PATH="$PATH:${HOME}/.local/bin"
+eval "$(register-python-argcomplete pipx)"
+
+# Node / nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+
+source <(kubectl completion bash)
+
+# Work profiles I want to keep out of git
+for file in ${HOME}/.work/*; do
+    [ -r "${file}" ] && . "${file}"
+done
