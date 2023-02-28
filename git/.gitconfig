@@ -3,6 +3,8 @@
 # Please adapt and uncomment the following lines:
 	name = bradschwartz
 	email = baschwartz95@gmail.com
+[includeIf "gitdir:~/code/embarktrucks/"]
+	path = ~/.gitconfig.work
 [color]
 	branch = auto
 	diff = auto

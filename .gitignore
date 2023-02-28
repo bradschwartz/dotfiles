@@ -1,3 +1,4 @@
 known_hosts
 ssh/*
 .DS_Store
+gitk
