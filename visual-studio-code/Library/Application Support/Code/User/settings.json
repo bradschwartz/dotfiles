@@ -61,5 +61,11 @@
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "workbench.colorTheme": "Default Light+"
+    "[python]": {
+        "editor.formatOnType": false
+    },
+    "workbench.colorTheme": "Default Light+",
+    "[dockercompose]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    }
 }

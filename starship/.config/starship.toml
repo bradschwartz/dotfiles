@@ -10,6 +10,9 @@ truncation_symbol = "…/"
 [git_branch]
 format = "[$symbol$branch(:$remote_branch)]($style) "
 
+[git_commit]
+tag_disabled = false
+
 [git_status]
 conflicted = "⚔️${count}"
 ahead = "⇡${count}"
