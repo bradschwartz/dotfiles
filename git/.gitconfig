@@ -30,6 +30,11 @@
 	defaultBranch = main
 [alias]
 	fix = "commit --amend --no-edit"
+	squash = "!squash() { \
+				local rebase_msg=\"$(git log ${1}..HEAD --pretty=format:%s)\"; \
+				git reset --soft \"${1}\"; \
+				git commit -am \"${rebase_msg}\"; \
+			}; squash"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
