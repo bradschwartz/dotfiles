@@ -15,6 +15,10 @@ tap "warrensbox/tap"
 brew "act"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -89,6 +93,8 @@ brew "groovy"
 brew "hadolint"
 # Kubernetes package manager
 brew "helm"
+# System/370, ESA/390 and z/Architecture Emulator
+brew "hercules"
 # Apache HTTP server
 brew "httpd"
 # Command-line benchmarking tool
@@ -169,6 +175,8 @@ brew "rbenv"
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
+# Rust toolchain installer
+brew "rustup-init"
 # JVM-based programming language
 brew "scala"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -199,6 +207,8 @@ brew "cue-lang/tap/cue"
 brew "dagger/tap/dagger"
 # Hosted repo for your public and private packages
 brew "gemfury/tap/gemfury"
+# Boundary
+brew "hashicorp/tap/boundary"
 # Consul
 brew "hashicorp/tap/consul"
 # The tfswitch command lets you switch between terraform versions.

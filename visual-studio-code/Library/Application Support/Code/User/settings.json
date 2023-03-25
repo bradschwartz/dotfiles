@@ -67,5 +67,8 @@
     "workbench.colorTheme": "Default Light+",
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

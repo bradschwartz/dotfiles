@@ -79,3 +79,8 @@ source <(kubectl completion bash)
 for file in ${HOME}/.work/*; do
     [ -r "${file}" ] && . "${file}"
 done
+
+# Rustland
+. "$HOME/.cargo/env"
+. <(rustup completions bash)
+. <(rustup completions bash cargo)
