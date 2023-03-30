@@ -81,6 +81,8 @@ for file in ${HOME}/.work/*; do
 done
 
 # Rustland
-. "$HOME/.cargo/env"
-. <(rustup completions bash)
-. <(rustup completions bash cargo)
+[[ -r "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+if command -v rustup; then
+    . <(rustup completions bash)
+    . <(rustup completions bash cargo)
+fi

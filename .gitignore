@@ -2,3 +2,5 @@ known_hosts
 .DS_Store
 gitk
 bash/dot-work/
+ssh/.ssh/id_*
+ssh/.ssh/known_hosts*
