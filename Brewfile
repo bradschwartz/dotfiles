@@ -63,6 +63,8 @@ brew "flyctl"
 brew "geos"
 # GitHub command-line tool
 brew "gh"
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
 # Distributed revision control system
 brew "git"
 # Tool Command Language
