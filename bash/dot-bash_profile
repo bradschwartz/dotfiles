@@ -40,6 +40,9 @@ eval "$(rbenv init - bash)"
 # https://stackoverflow.com/a/14970926
 export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
 [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
+for COMPLETION in "${BREW_PREFIX}/etc/bash_completion.d/"*; do
+    [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+done
 
 # Homebrew
 export HOMEBREW_AUTO_UPDATE_SECS=3600
@@ -82,7 +85,7 @@ done
 
 # Rustland
 [[ -r "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
-if command -v rustup; then
+if command -v rustup > /dev/null; then
     . <(rustup completions bash)
     . <(rustup completions bash cargo)
 fi
