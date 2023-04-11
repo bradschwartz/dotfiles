@@ -13,22 +13,13 @@
           `(("." . ,(concat user-emacs-directory "backups"))))
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq vc-follow-symlinks t)
-(global-set-key (kbd "C-?") 'help-command)
-(global-set-key (kbd "M-?") 'mark-paragraph)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(use-package company go-mode lsp-mode paredit)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
+;; Don't clutter init files with auto-inserted settings
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
 
+;; lsp settings
+;; ensure gopls is always started when go-mode is ran
 (require 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
 
@@ -39,5 +30,14 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
-;; using `use-package` to ensure all packages I want are installed 
+;; using `use-package` to ensure all packages I want are installed
+;; Globally allow `use-package` to always install if not available
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+;; All the packages I want to always have available
+;; Populate manually from `M-x packages-list-packages` and find installed
 (use-package company)
+(use-package go-mode)
+(use-package lsp-mode)
+(use-package paredit)
