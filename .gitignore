@@ -5,3 +5,5 @@ bash/dot-work/
 ssh/.ssh/id_*
 ssh/.ssh/known_hosts*
 emacs/**/elpa
+emacs/**/.lsp*
+emacs/**/auto-save-list
