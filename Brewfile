@@ -35,6 +35,8 @@ brew "docker-credential-helper-ecr"
 brew "emacs"
 # Command-line tools for fly.io services
 brew "flyctl"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -65,6 +67,8 @@ brew "hyperfine"
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
