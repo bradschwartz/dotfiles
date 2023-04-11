@@ -25,6 +25,8 @@ brew "coreutils"
 brew "curl"
 # Message bus system, providing inter-application communication
 brew "dbus"
+# Reference implementation for the Development Containers specification
+brew "devcontainer"
 # Tool for exploring each layer in a docker image
 brew "dive"
 # Docker Credential Helper for Amazon ECR
