@@ -5,6 +5,20 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
+;; using `use-package` to ensure all packages I want are installed
+;; Globally allow `use-package` to always install if not available
+;; This _must_ come first before any other package references/configurations
+;; Need to manually install `use-package` the first time on a fresh install/wipe of elpa folder
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+;; All the packages I want to always have available
+;; Populate manually from `M-x packages-list-packages` and find installed
+(use-package company)
+(use-package go-mode)
+(use-package lsp-mode)
+(use-package paredit)
+
 (setq column-number-mode t)
 (setq show-paren-mode t)
 (setq make-backup-files nil) ; stop creating backup~ files
@@ -30,14 +44,5 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
-;; using `use-package` to ensure all packages I want are installed
-;; Globally allow `use-package` to always install if not available
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
-
-;; All the packages I want to always have available
-;; Populate manually from `M-x packages-list-packages` and find installed
-(use-package company)
-(use-package go-mode)
-(use-package lsp-mode)
-(use-package paredit)
+;; always enable company-mode
+(add-hook 'after-init-hook 'global-company-mode)
