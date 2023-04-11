@@ -46,3 +46,7 @@
 
 ;; always enable company-mode
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; Section for any local working stuff
+(add-to-list 'load-path "~/code/bradschwartz/devcontainer.el/")
+(require 'devcontainer)
