@@ -7,3 +7,5 @@ ssh/.ssh/known_hosts*
 emacs/**/elpa
 emacs/**/.lsp*
 emacs/**/auto-save-list
+emacs/**/eshell/
+emacs/**/tramp
