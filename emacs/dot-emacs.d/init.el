@@ -27,7 +27,7 @@
 (setq make-backup-files nil) ; stop creating backup~ files
 ;; auto backup to ~/.emacs.d/backups
 (setq backup-directory-alist
-          `(("." . ,(concat user-emacs-directory "backups"))))
+      `(("." . ,(concat user-emacs-directory "backups"))))
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq vc-follow-symlinks t)
 ;; issue on Mac when opening entire dirs: https://stackoverflow.com/a/56096775
