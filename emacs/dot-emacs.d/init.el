@@ -51,6 +51,11 @@
   (add-hook 'before-save-hook #'lsp-organize-imports t t))
 (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
 
+;; paredit-mode settings: https://wikemacs.org/wiki/Paredit-mode
+;; enabled in all elisp buffers
+(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+
 ;; always enable company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
