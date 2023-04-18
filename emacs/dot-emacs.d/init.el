@@ -60,5 +60,7 @@
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Section for any local working stuff
-(add-to-list 'load-path "~/code/bradschwartz/devcontainer.el/")
-(require 'devcontainer)
+(use-package devcontainer
+  :load-path "~/code/bradschwartz/devcontainer.el/")
+
+(add-hook 'dired-before-readin-hook #'devcontainer-dir-open-hook)
