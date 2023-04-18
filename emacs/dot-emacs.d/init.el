@@ -64,3 +64,5 @@
   :load-path "~/code/bradschwartz/devcontainer.el/")
 
 (add-hook 'dired-before-readin-hook #'devcontainer-dir-open-hook)
+
+(when (file-exists-p "~/.emacs.d/debug-hooks.el") (load "~/.emacs.d/debug-hooks.el"))
