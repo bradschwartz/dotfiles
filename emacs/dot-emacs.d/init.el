@@ -15,9 +15,12 @@
 ;; All the packages I want to always have available
 ;; Populate manually from `M-x packages-list-packages` and find installed
 (use-package company)
-(use-package go-mode)
 (use-package lsp-mode)
 (use-package paredit)
+
+;; language modes
+(use-package go-mode)
+(use-package rust-mode)
 
 (setq column-number-mode t)
 (setq show-paren-mode t)
@@ -27,6 +30,9 @@
           `(("." . ,(concat user-emacs-directory "backups"))))
 (setq auto-save-default nil) ; stop creating #autosave# files
 (setq vc-follow-symlinks t)
+;; issue on Mac when opening entire dirs: https://stackoverflow.com/a/56096775
+(when (string= system-type "darwin")
+  (setq dired-use-ls-dired nil))
 
 ;; Don't clutter init files with auto-inserted settings
 (setq custom-file "~/.emacs.d/custom.el")
@@ -36,6 +42,7 @@
 ;; ensure gopls is always started when go-mode is ran
 (require 'lsp-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)
+(add-hook 'rust-mode-hook #'lsp-deferred)
 
 ;; Set up before-save hooks to format buffer and add/delete imports.
 ;; Make sure you don't have other gofmt/goimports hooks enabled.
