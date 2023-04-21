@@ -8,7 +8,8 @@
 ;; using `use-package` to ensure all packages I want are installed
 ;; Globally allow `use-package` to always install if not available
 ;; This _must_ come first before any other package references/configurations
-;; Need to manually install `use-package` the first time on a fresh install/wipe of elpa folder
+;; Auto install use-package directly from ELPA if needed, otherwise it handles everything
+(unless (package-installed-p 'use-package) (package-install 'use-package))
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
