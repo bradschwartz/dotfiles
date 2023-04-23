@@ -15,13 +15,33 @@
 
 ;; All the packages I want to always have available
 ;; Populate manually from `M-x packages-list-packages` and find installed
-(use-package company)
+(use-package company
+  :hook (
+	 (prog-mode))
+  )
 (use-package lsp-mode)
-(use-package paredit)
+(use-package paredit
+  ;; Active paredit automatically: https://www.emacswiki.org/emacs/ParEdit#h5o-1
+  :hook (
+	 (emacs-lisp-mode . enable-paredit-mode)
+	 (eval-expression-minibuffer-setup . enable-paredit-mode)
+	 (ielm-mode . enable-paredit-mode)
+	 (lisp-mode . enable-paredit-mode)
+	 (lisp-interaction-mode . enable-paredit-mode)
+	 (scheme-mode . enable-paredit-mode))
+  :init
+  (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
+  )
 
 ;; language modes
-(use-package go-mode)
-(use-package rust-mode)
+(use-package go-mode
+  :hook (
+	 (go-mode . lsp-deferred)
+	 (before-save . lsp-format-buffer)
+	 (before-save . lsp-organize-imports)))
+(use-package rust-mode
+  :hook ((rust-mode . lsp-deferred))
+  )
 
 (setq column-number-mode t)
 (setq show-paren-mode t)
@@ -39,31 +59,10 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-;; lsp settings
-;; ensure gopls is always started when go-mode is ran
-(require 'lsp-mode)
-(add-hook 'go-mode-hook #'lsp-deferred)
-(add-hook 'rust-mode-hook #'lsp-deferred)
-
-;; Set up before-save hooks to format buffer and add/delete imports.
-;; Make sure you don't have other gofmt/goimports hooks enabled.
-(defun lsp-go-install-save-hooks ()
-  (add-hook 'before-save-hook #'lsp-format-buffer t t)
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
-(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
-
-;; paredit-mode settings: https://wikemacs.org/wiki/Paredit-mode
-;; enabled in all elisp buffers
-(autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code." t)
-(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
-
-;; always enable company-mode
-(add-hook 'after-init-hook 'global-company-mode)
-
 ;; Section for any local working stuff
 (use-package devcontainer
-  :load-path "~/code/bradschwartz/devcontainer.el/")
-
-(add-hook 'dired-before-readin-hook #'devcontainer-dir-open-hook)
+  :load-path "~/code/bradschwartz/devcontainer.el/"
+  :hook ((dired-before-readin . devcontainer-dir-open-hook))
+  )
 
 (when (file-exists-p "~/.emacs.d/debug-hooks.el") (load "~/.emacs.d/debug-hooks.el"))
