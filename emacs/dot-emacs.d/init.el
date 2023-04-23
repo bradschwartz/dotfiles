@@ -42,7 +42,8 @@
   ;; Active paredit automatically: https://www.emacswiki.org/emacs/ParEdit#h5o-1
   :hook (
 	 (emacs-lisp-mode . enable-paredit-mode)
-	 (eval-expression-minibuffer-setup . enable-paredit-mode)
+	 ;; disabled for: https://www.reddit.com/r/emacs/comments/101uwgd/enable_paredit_mode_for_evalexpression_mini/
+	 ;;(eval-expression-minibuffer-setup . enable-paredit-mode)
 	 (ielm-mode . enable-paredit-mode)
 	 (lisp-mode . enable-paredit-mode)
 	 (lisp-interaction-mode . enable-paredit-mode)
@@ -60,6 +61,10 @@
 (use-package rust-mode
   :hook ((rust-mode . lsp-deferred))
   )
+
+;; validate elisp packages, required for melpa upload
+;; https://github.com/purcell/package-lint
+(use-package package-lint)
 
 ;; Section for any local working stuff
 (use-package devcontainer
