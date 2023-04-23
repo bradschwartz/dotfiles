@@ -9,3 +9,5 @@ emacs/**/.lsp*
 emacs/**/auto-save-list
 emacs/**/eshell/
 emacs/**/tramp
+emacs/**/games/
+aws/.aws/credentials
