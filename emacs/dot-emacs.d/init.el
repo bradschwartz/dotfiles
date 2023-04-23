@@ -27,6 +27,12 @@
 ;; Globally allow `use-package` to always install if not available
 ;; This _must_ come first before any other package references/configurations
 ;; Auto install use-package directly from ELPA if needed, otherwise it handles everything
+(when (and
+       (not (package-installed-p 'use-package))
+       (not (y-or-n-p "`use-package` not installed - continue with downloading *all* wanted packages?"))
+       )
+  (signal 'quit nil)
+  )
 (unless (package-installed-p 'use-package) (package-install 'use-package))
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
