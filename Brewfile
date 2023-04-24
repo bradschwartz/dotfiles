@@ -1,6 +1,7 @@
 tap "argoproj/tap"
 tap "bradschwartz/tap", "https://github.com/bradschwartz/homebrew-tap.git"
 tap "cue-lang/tap"
+tap "d12frosted/emacs-plus"
 tap "dagger/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -9,6 +10,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+# Spell checker with better logic than ispell
+brew "aspell"
 # Automatic configure script builder
 brew "autoconf"
 # Official Amazon AWS command-line interface
@@ -32,7 +35,7 @@ brew "dive"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GNU Emacs text editor
-brew "emacs"
+brew "emacs", link: false
 # Command-line tools for fly.io services
 brew "flyctl"
 # GNU compiler collection
@@ -113,6 +116,8 @@ brew "rbenv"
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
+# Experimental Rust compiler front-end for IDEs
+brew "rust-analyzer"
 # Rust toolchain installer
 brew "rustup-init"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -135,19 +140,22 @@ brew "vault"
 brew "wget"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
+brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp", "without-cocoa"]
 # Dagger is a programmable deployment system.
 brew "dagger/tap/dagger"
 # Boundary
 brew "hashicorp/tap/boundary"
 # Consul
 brew "hashicorp/tap/consul"
+# Terraform Language Server
+brew "hashicorp/tap/terraform-ls"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Draw.io is free online diagram software
+# Online diagram software
 cask "drawio"
 cask "font-inconsolata-for-powerline"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
