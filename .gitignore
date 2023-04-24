@@ -10,4 +10,5 @@ emacs/**/auto-save-list
 emacs/**/eshell/
 emacs/**/tramp
 emacs/**/games/
+emacs/**/eln-cache
 aws/.aws/credentials
