@@ -11,4 +11,5 @@ emacs/**/eshell/
 emacs/**/tramp
 emacs/**/games/
 emacs/**/eln-cache
+emacs/**/transient
 aws/.aws/credentials
