@@ -33,6 +33,9 @@
 
 ;; All the packages I want to always have available
 ;; Populate manually from `M-x packages-list-packages` and find installed
+
+(use-package magit)
+
 (use-package company
   :hook (
 	 (prog-mode))
@@ -65,6 +68,13 @@
 ;; validate elisp packages, required for melpa upload
 ;; https://github.com/purcell/package-lint
 (use-package package-lint)
+
+;; terraform language settings
+;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
+(use-package company-terraform
+  :init
+  (company-terraform-init)
+  )
 
 ;; Section for any local working stuff
 (use-package devcontainer
