@@ -35,6 +35,10 @@
 ;; Populate manually from `M-x packages-list-packages` and find installed
 
 (use-package magit)
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1)
+  )
 
 (use-package company
   :hook (
