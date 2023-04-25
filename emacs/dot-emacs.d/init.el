@@ -40,7 +40,6 @@
   :hook (
 	 (prog-mode))
   )
-(use-package lsp-mode)
 (use-package paredit
   ;; Active paredit automatically: https://www.emacswiki.org/emacs/ParEdit#h5o-1
   :hook (
@@ -58,11 +57,26 @@
 ;; language modes
 (use-package go-mode
   :hook (
-	 (go-mode . lsp-deferred)
-	 (before-save . lsp-format-buffer)
-	 (before-save . lsp-organize-imports)))
+	 (go-mode . eglot-ensure)
+	 (before-save . eglot-format-buffer)
+	 (before-save . eglot-code-action-organize-imports)
+	 )
+  )
+;; sets up inlay hints
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+	       '((go-mode) .
+		 ("gopls" :initializationOptions
+		  (:hints (:parameterNames t
+					   :rangeVariableTypes t
+					   :functionTypeParameters t
+					   :assignVariableTypes t
+					   :compositeLiteralFields t
+					   :compositeLiteralTypes t
+					   :constantValues t)))))
+  )
 (use-package rust-mode
-  :hook ((rust-mode . lsp-deferred))
+  :hook ((rust-mode . eglot-ensure))
   )
 
 ;; validate elisp packages, required for melpa upload
@@ -75,7 +89,12 @@
   :init
   (company-terraform-init)
   :hook (
-	 (terraform-mode . lsp-deferred))
+	 (terraform-mode . eglot-ensure))
+  )
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+	       '(terraform-mode . ("terraform-ls" "serve"))
+	       )
   )
 
 ;; Section for any local working stuff
