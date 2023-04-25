@@ -39,6 +39,7 @@
   :config
   (editorconfig-mode 1)
   )
+(use-package markdown-mode)
 
 (use-package company
   :hook (
