@@ -23,6 +23,10 @@
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
+;; ruler at column 80
+(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(setq display-fill-column-indicator-column 80)
+
 ;; using `use-package` to ensure all packages I want are installed
 ;; Globally allow `use-package` to always install if not available
 ;; This _must_ come first before any other package references/configurations
