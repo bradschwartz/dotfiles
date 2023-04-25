@@ -74,6 +74,8 @@
 (use-package company-terraform
   :init
   (company-terraform-init)
+  :hook (
+	 (terraform-mode . lsp-deferred))
   )
 
 ;; Section for any local working stuff
