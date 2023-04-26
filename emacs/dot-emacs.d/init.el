@@ -1,3 +1,12 @@
+;; ~0.3 seconds saved on startup: https://www.emacswiki.org/emacs/OptimizingEmacsStartup
+;; Minimize garbage collection during startup
+(setq gc-cons-threshold most-positive-fixnum)
+
+;; Lower threshold back to 8 MiB (default is 800kB)
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (setq gc-cons-threshold (expt 2 23))))
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (when (< emacs-major-version 24)
@@ -43,6 +52,8 @@
   :config
   (editorconfig-mode 1)
   )
+(use-package try)
+
 (use-package markdown-mode)
 
 (use-package company
