@@ -33,7 +33,7 @@
 (load custom-file)
 
 ;; ruler at column 80
-(add-hook 'prog-mode-hook 'display-fill-column-indicator-mode)
+(add-hook 'fundamental-mode 'display-fill-column-indicator-mode)
 (setq display-fill-column-indicator-column 80)
 
 ;; using `use-package` to ensure all packages I want are installed
@@ -55,6 +55,7 @@
 (use-package try)
 
 (use-package markdown-mode)
+(use-package yaml-mode)
 
 (use-package company
   :hook (
