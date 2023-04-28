@@ -45,9 +45,8 @@ for COMPLETION in "${BREW_PREFIX}/etc/bash_completion.d/"*; do
 done
 
 # Homebrew
-export HOMEBREW_AUTO_UPDATE_SECS=3600
+export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ANALYTICS=1
-export SPARK_SHELL=${BREW_PREFIX}/opt/apache-spark/libexec/
 export HOMEBREW_BAT=1
 
 # Golang
