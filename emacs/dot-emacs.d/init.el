@@ -106,9 +106,7 @@
 
 ;; terraform language settings
 ;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
-(use-package company-terraform
-  :init
-  (company-terraform-init)
+(use-package terraform-mode
   :hook (
 	 (terraform-mode . eglot-ensure))
   )
