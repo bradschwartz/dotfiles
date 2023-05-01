@@ -12,4 +12,5 @@ emacs/**/tramp
 emacs/**/games/
 emacs/**/eln-cache
 emacs/**/transient
+emacs/**/tree-sitter
 aws/.aws/credentials

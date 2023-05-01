@@ -105,7 +105,7 @@
   :config
   (add-to-list 'eglot-server-programs '(terraform-mode . ("terraform-ls" "serve")))
   (add-to-list 'eglot-server-programs
-	       '((go-ts-mode) .
+	       '((go-ts-mode go-mode) .
 		 ("gopls" :initializationOptions
 		  (:hints (:parameterNames t
 				    :rangeVariableTypes t
