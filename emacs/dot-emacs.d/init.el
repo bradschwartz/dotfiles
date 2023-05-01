@@ -33,8 +33,9 @@
 (load custom-file)
 
 ;; ruler at column 80
-(add-hook 'fundamental-mode 'display-fill-column-indicator-mode)
-(setq display-fill-column-indicator-column 80)
+(setq-default display-fill-column-indicator-column 80)
+(global-display-fill-column-indicator-mode t)
+
 
 ;; using `use-package` to ensure all packages I want are installed
 ;; Globally allow `use-package` to always install if not available
