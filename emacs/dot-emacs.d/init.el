@@ -89,6 +89,10 @@
   (global-treesit-auto-mode)
   )
 
+(use-package rust-mode)
+(use-package go-mode)
+(use-package terraform-mode) ;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
+
 ;; Make sure to update this with any new language servers installed!
 ;; This removes the need to have (use-package ${lang}-mode :hook ((${lang}-mode . eglot-ensure)))
 ;; since we use tree-sitter for syntax now, at least when supported
@@ -98,35 +102,23 @@
 	 (rust-ts-mode . eglot-ensure)
 	 (terraform-mode . eglot-ensure)
 	 )
-  )
-
-;; sets up inlay hints
-(with-eval-after-load 'eglot
+  :config
+  (add-to-list 'eglot-server-programs '(terraform-mode . ("terraform-ls" "serve")))
   (add-to-list 'eglot-server-programs
 	       '((go-ts-mode) .
 		 ("gopls" :initializationOptions
 		  (:hints (:parameterNames t
-					   :rangeVariableTypes t
-					   :functionTypeParameters t
-					   :assignVariableTypes t
-					   :compositeLiteralFields t
-					   :compositeLiteralTypes t
-					   :constantValues t)))))
+				    :rangeVariableTypes t
+				    :functionTypeParameters t
+				    :assignVariableTypes t
+				    :compositeLiteralFields t
+				    :compositeLiteralTypes t
+				    :constantValues t)))))
   )
 
 ;; validate elisp packages, required for melpa upload
 ;; https://github.com/purcell/package-lint
 (use-package package-lint)
-
-;; terraform language settings
-;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
-(use-package terraform-mode)
-
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs
-	       '(terraform-mode . ("terraform-ls" "serve"))
-	       )
-  )
 
 ;; Section for any local working stuff
 (use-package devcontainer
