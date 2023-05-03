@@ -34,6 +34,8 @@ brew "devcontainer"
 brew "dive"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 # GNU Emacs text editor
 brew "emacs", link: false
 # Command-line tools for fly.io services
@@ -84,6 +86,8 @@ brew "zlib"
 brew "mysql"
 # NCurses Disk Usage
 brew "ncdu"
+# Fast, highly customisable system info script
+brew "neofetch"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
@@ -161,10 +165,14 @@ cask "font-inconsolata-for-powerline"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
 cask "font-menlo-for-powerline"
+# Apple's SF Mono font patched with the Nerd Fonts patcher for Powerline support
+cask "font-sf-mono-for-powerline"
 # Web browser
 cask "google-chrome"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
+# Code notebooks for Elixir developers
+cask "livebook"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
