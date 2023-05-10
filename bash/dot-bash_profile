@@ -70,10 +70,8 @@ export AWS_PAGER=""
 export PATH="$PATH:${HOME}/.local/bin"
 eval "$(register-python-argcomplete pipx)"
 
-# Node / nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+# Node
+eval "$(fnm env --use-on-cd)"
 
 source <(kubectl completion bash)
 

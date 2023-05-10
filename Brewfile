@@ -40,6 +40,8 @@ brew "elixir"
 brew "emacs", link: false
 # Command-line tools for fly.io services
 brew "flyctl"
+# Fast and simple Node.js version manager
+brew "fnm"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
