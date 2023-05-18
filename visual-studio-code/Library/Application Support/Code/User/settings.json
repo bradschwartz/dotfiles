@@ -22,7 +22,7 @@
     "go.useLanguageServer": true,
     "workbench.settings.editor": "json",
     "explorer.confirmDragAndDrop": false,
-    "window.autoDetectColorScheme": true,
+    "window.autoDetectColorScheme": false,
     "workbench.preferredDarkColorTheme": "Default Dark+",
     "workbench.preferredHighContrastColorTheme": "Default Light+",
     "editor.rulers": [
@@ -64,11 +64,14 @@
     "[python]": {
         "editor.formatOnType": false
     },
-    "workbench.colorTheme": "Default High Contrast Light",
+    "workbench.colorTheme": "Default Dark+",
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }
