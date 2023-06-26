@@ -14,3 +14,4 @@ emacs/**/eln-cache
 emacs/**/transient
 emacs/**/tree-sitter
 aws/.aws/credentials
+visual-studio-code/
