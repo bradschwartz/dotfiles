@@ -86,3 +86,22 @@ if command -v rustup > /dev/null; then
     . <(rustup completions bash)
     . <(rustup completions bash cargo)
 fi
+
+# ASDF for more specific tool versioning using .tool-versions files
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+## This was needed to asdf install erlang 24, specifically --without-xw
+export KERL_CONFIGURE_OPTIONS="--disable-debug \
+                               --disable-hipe \
+                               --disable-sctp \
+                               --disable-silent-rules \
+                               --enable-dynamic-ssl-lib \
+                               --enable-kernel-poll \
+                               --enable-shared-zlib \
+                               --enable-smp-support \
+                               --enable-threads \
+                               --without-wx
+                               --with-ssl=$(brew --prefix openssl@1.1) \
+                               --with-wx-config=$(brew --prefix)/bin/wx-config \
+                               --without-javac \
+                               --without-jinterface \
+                               --without-odbc"
