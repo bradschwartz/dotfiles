@@ -25,6 +25,7 @@
     "window.autoDetectColorScheme": false,
     "workbench.preferredDarkColorTheme": "Default Dark+",
     "workbench.preferredHighContrastColorTheme": "Default Light+",
+    "window.autoDetectHighContrast": false,
     "editor.rulers": [
         80,
         120,
@@ -64,7 +65,7 @@
     "[python]": {
         "editor.formatOnType": false
     },
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Default Light+",
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
@@ -73,5 +74,6 @@
     },
     "[javascriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "security.workspace.trust.untrustedFiles": "open"
 }
