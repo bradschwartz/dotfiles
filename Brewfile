@@ -3,6 +3,8 @@ tap "bradschwartz/tap", "https://github.com/bradschwartz/homebrew-tap.git"
 tap "cue-lang/tap"
 tap "d12frosted/emacs-plus"
 tap "dagger/tap"
+tap "derailed/k9s"
+tap "garden-io/garden"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -10,10 +12,19 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-# Spell checker with better logic than ispell
-brew "aspell"
+tap "johanhaleby/kubetail"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Automatic configure script builder
 brew "autoconf"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# Spell checker with better logic than ispell
+brew "aspell"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -22,8 +33,8 @@ brew "bash"
 brew "bash-completion@2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Message bus system, providing inter-application communication
@@ -32,16 +43,16 @@ brew "dbus"
 brew "devcontainer"
 # Tool for exploring each layer in a docker image
 brew "dive"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
-# Functional metaprogramming aware language built on Erlang VM
-brew "elixir"
 # GNU Emacs text editor
 brew "emacs", link: false
+# Command-line tool to interact with exercism.io
+brew "exercism"
 # Command-line tools for fly.io services
 brew "flyctl"
-# Fast and simple Node.js version manager
-brew "fnm"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -54,6 +65,10 @@ brew "tcl-tk"
 brew "git-gui"
 # Git extension for versioning large files
 brew "git-lfs"
+# Open-source GitLab command-line tool
+brew "glab"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
@@ -74,14 +89,16 @@ brew "hyperfine"
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
 brew "maven-completion"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
+# Elixir Mix completion plus shortcuts/colors
+brew "mix-completion"
 # General-purpose lossless data-compression library
 brew "zlib"
 # Open source relational database management system
@@ -90,12 +107,12 @@ brew "mysql"
 brew "ncdu"
 # Fast, highly customisable system info script
 brew "neofetch"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
 brew "nvm"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Python dependency management tool
@@ -103,9 +120,11 @@ brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
-brew "postgresql@13"
+brew "postgresql@13", restart_service: true
 # Object-relational database system
 brew "postgresql@14"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Show ps output as a tree
 brew "pstree"
 # Python version management
@@ -126,16 +145,16 @@ brew "rsync"
 brew "rust-analyzer"
 # Rust toolchain installer
 brew "rustup-init"
+# Login and retrieve AWS temporary credentials using a SAML IDP
+brew "saml2aws"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Modern SSH server for teams managing distributed infrastructure
-brew "teleport"
 # Terraform version manager inspired by rbenv
-brew "tfenv"
+brew "tfenv", link: false
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -144,33 +163,35 @@ brew "tree"
 brew "vault"
 # Internet file retriever
 brew "wget"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
 brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp", "without-cocoa"]
 # Dagger is a programmable deployment system.
 brew "dagger/tap/dagger"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
+# Development engine for Kubernetes
+brew "garden-io/garden/garden-cli"
 # Boundary
 brew "hashicorp/tap/boundary"
-# Consul
-brew "hashicorp/tap/consul"
 # Terraform Language Server
 brew "hashicorp/tap/terraform-ls"
+# Tail logs from multiple Kubernetes pods at the same time
+brew "johanhaleby/kubetail/kubetail"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
-# Online diagram software
-cask "drawio"
 cask "font-inconsolata-for-powerline"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
 cask "font-menlo-for-powerline"
 # Apple's SF Mono font patched with the Nerd Fonts patcher for Powerline support
 cask "font-sf-mono-for-powerline"
-# Web browser
-cask "google-chrome"
+# HTTP and GraphQL Client
+cask "insomnia"
 # IDE for Java development - community edition
 cask "intellij-idea-ce"
 # Code notebooks for Elixir developers
@@ -179,13 +200,30 @@ cask "livebook"
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Team communication and collaboration software
-cask "slack"
 # Mesh VPN based on Wireguard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin8"
 # Open-source code editor
 cask "visual-studio-code"
-# Video communication and virtual meeting platform
-cask "zoom"
+vscode "bierner.markdown-mermaid"
+vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
+vscode "foxundermoon.shell-format"
+vscode "GitHub.copilot"
+vscode "GitLab.gitlab-workflow"
+vscode "golang.go"
+vscode "GraphQL.vscode-graphql"
+vscode "GraphQL.vscode-graphql-syntax"
+vscode "hashicorp.terraform"
+vscode "JakeBecker.elixir-ls"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.makefile-tools"
+vscode "redhat.vscode-yaml"
+vscode "rust-lang.rust-analyzer"
+vscode "unifiedjs.vscode-mdx"
+vscode "william-voyek.vscode-nginx"
