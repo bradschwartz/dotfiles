@@ -52,7 +52,6 @@ export HOMEBREW_BAT=1
 # Golang
 export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
-complete -C ~/go/bin/gocomplete go
 
 # Hashicorp
 complete -C ${BREW_PREFIX}/bin/terraform terraform
@@ -69,9 +68,6 @@ export AWS_PAGER=""
 # Created by `pipx`
 export PATH="$PATH:${HOME}/.local/bin"
 eval "$(register-python-argcomplete pipx)"
-
-# Node
-eval "$(fnm env --use-on-cd)"
 
 source <(kubectl completion bash)
 
