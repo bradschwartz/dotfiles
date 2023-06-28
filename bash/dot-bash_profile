@@ -82,7 +82,7 @@ done
 
 # Rustland
 [[ -r "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
-if command -v rustup > /dev/null; then
+if command -v rustup >/dev/null; then
     . <(rustup completions bash)
     . <(rustup completions bash cargo)
 fi
@@ -105,3 +105,11 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug \
                                --without-javac \
                                --without-jinterface \
                                --without-odbc"
+
+# Moving to Colima caused some weird docker issues
+# Non-standard socket location, and looks like plugins (compose, buildx, etc)
+# only came with Docker Desktop by default. Need to brew install and symlink
+# https://github.com/abiosoft/colima/blob/main/docs/FAQ.md#docker-plugins-are-missing-buildx-scan
+## specifically: brew install docker-buildx docker-compose docker-credential-helper
+
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
