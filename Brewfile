@@ -45,6 +45,12 @@ brew "devcontainer"
 brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GNU Emacs text editor
@@ -71,12 +77,12 @@ brew "glab"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Development kit for the Java programming language
+brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Development kit for the Java programming language
-brew "openjdk"
 # Java-based scripting language
 brew "groovy"
 # Smarter Dockerfile linter to validate best practices
@@ -184,6 +190,8 @@ brew "johanhaleby/kubetail/kubetail"
 cask "adoptopenjdk"
 # Voice and text chat software
 cask "discord"
+# Web browser
+cask "firefox-developer-edition"
 cask "font-inconsolata-for-powerline"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
@@ -211,7 +219,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "foxundermoon.shell-format"
-vscode "GitHub.copilot"
 vscode "GitLab.gitlab-workflow"
 vscode "golang.go"
 vscode "GraphQL.vscode-graphql"
