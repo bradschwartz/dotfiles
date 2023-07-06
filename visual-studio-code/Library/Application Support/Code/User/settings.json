@@ -17,7 +17,6 @@
             "source.organizeImports": false
         }
     },
-    "latex-workshop.view.pdf.viewer": "tab",
     "go.formatTool": "default",
     "go.useLanguageServer": true,
     "workbench.settings.editor": "json",
@@ -46,18 +45,13 @@
     "[ruby]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "latex-workshop.message.update.show": false,
     "window.title": "${rootName}${separator}${activeFolderMedium}/${activeEditorShort}",
-    "cmake.configureOnOpen": true,
     "redhat.telemetry.enabled": true,
-    "markdown-preview-enhanced.liveUpdate": true,
     "[yaml]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "java.import.gradle.java.home": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home",
     "workbench.startupEditor": "none",
     "go.toolsManagement.autoUpdate": true,
-    "groovyLint.basic.loglevel": "error",
     "terraform.languageServer.enable": true,
     "[dockerfile]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
@@ -66,6 +60,7 @@
         "editor.formatOnType": false
     },
     "workbench.colorTheme": "Default Light+",
+    "workbench.editor.pinnedTabSizing": "shrink",
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
