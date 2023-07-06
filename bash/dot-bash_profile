@@ -107,5 +107,5 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug \
 # only came with Docker Desktop by default. Need to brew install and symlink
 # https://github.com/abiosoft/colima/blob/main/docs/FAQ.md#docker-plugins-are-missing-buildx-scan
 ## specifically: brew install docker-buildx docker-compose docker-credential-helper
-
-export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+## Should be set as a docker context by colima on startup:
+# export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
