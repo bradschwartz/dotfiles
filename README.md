@@ -27,7 +27,7 @@ steps were undocumented and needed to be done first. Here they are:
 ```bash
 ## Actually install Homebrew! And add it to zprofile since that's Mac default
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/brad/.zprofile
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ## ensure rosetta2 installed for adoptopenjdk8 and temurin8
