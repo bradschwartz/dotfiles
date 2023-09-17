@@ -22,6 +22,8 @@
 	untracked = red
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[includeIf "gitdir:~/code/podium/"]
+	path = ~/.config/git/podium.gitconfig
 [core]
 	excludesfile = ~/.config/git/ignore
 [pull]
@@ -42,3 +44,5 @@
 	smudge = git-lfs smudge -- %f
 [github]
 	user = bradschwartz
+[http]
+	postBuffer = 157286400
