@@ -13,6 +13,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "johanhaleby/kubetail"
+tap "metalbear-co/mirrord"
+tap "oven-sh/bun"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Automatic configure script builder
@@ -25,6 +27,8 @@ brew "asdf"
 brew "aspell"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -33,6 +37,10 @@ brew "bash"
 brew "bash-completion@2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy"
+# Emulator for x86 and PowerPC
+brew "qemu", args: ["HEAD"]
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -54,9 +62,11 @@ brew "docker-credential-helper"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GNU Emacs text editor
-brew "emacs", link: false
+brew "emacs"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line tools for fly.io services
 brew "flyctl"
 # GNU compiler collection
@@ -97,8 +107,12 @@ brew "inetutils"
 brew "jq"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
+# SDK for building Kubernetes APIs using CRDs
+brew "kubebuilder"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Report faked system time to programs
+brew "libfaketime"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
@@ -119,6 +133,10 @@ brew "nginx"
 brew "nmap"
 # Manage multiple Node.js versions
 brew "nvm"
+# Open source, general-purpose policy engine
+brew "opa"
+# SDK for building Kubernetes applications
+brew "operator-sdk"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Python dependency management tool
@@ -126,7 +144,7 @@ brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
-brew "postgresql@13", restart_service: true
+brew "postgresql@13"
 # Object-relational database system
 brew "postgresql@14"
 # Protocol buffers (Google's data interchange format)
@@ -143,6 +161,8 @@ brew "python-yq"
 brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
+# Persistent key-value database, with built-in net interface
+brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
@@ -153,6 +173,8 @@ brew "rust-analyzer"
 brew "rustup-init"
 # Login and retrieve AWS temporary credentials using a SAML IDP
 brew "saml2aws"
+# Database of common MIME types
+brew "shared-mime-info"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Cross-shell prompt for astronauts
@@ -171,9 +193,10 @@ brew "vault"
 brew "wget"
 # Cross-platform C++ GUI toolkit
 brew "wxwidgets"
+# Linter for YAML files
+brew "yamllint"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
-brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp", "without-cocoa"]
 # Dagger is a programmable deployment system.
 brew "dagger/tap/dagger"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -186,18 +209,22 @@ brew "hashicorp/tap/boundary"
 brew "hashicorp/tap/terraform-ls"
 # Tail logs from multiple Kubernetes pods at the same time
 brew "johanhaleby/kubetail/kubetail"
+# Connect your local process and your cloud environment
+brew "metalbear-co/mirrord/mirrord"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Voice and text chat software
 cask "discord"
-# Web browser
-cask "firefox-developer-edition"
 cask "font-inconsolata-for-powerline"
 # Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
 cask "font-menlo-for-powerline"
 # Apple's SF Mono font patched with the Nerd Fonts patcher for Powerline support
 cask "font-sf-mono-for-powerline"
+# Open-source platform for visualizing and manipulating large graphs
+cask "gephi"
 # HTTP and GraphQL Client
 cask "insomnia"
 # IDE for Java development - community edition
@@ -208,6 +235,8 @@ cask "livebook"
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Video game digital distribution service
+cask "steam"
 # Mesh VPN based on Wireguard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -219,18 +248,27 @@ vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "foxundermoon.shell-format"
+vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
+vscode "github.vscode-github-actions"
 vscode "GitLab.gitlab-workflow"
 vscode "golang.go"
 vscode "GraphQL.vscode-graphql"
 vscode "GraphQL.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
 vscode "JakeBecker.elixir-ls"
+vscode "jasonnutter.vscode-codeowners"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.black-formatter"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.makefile-tools"
+vscode "rebornix.ruby"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
+vscode "Shopify.ruby-lsp"
+vscode "tsandall.opa"
 vscode "unifiedjs.vscode-mdx"
 vscode "william-voyek.vscode-nginx"
+vscode "wingrunr21.vscode-ruby"
