@@ -15,18 +15,25 @@ tap "homebrew/services"
 tap "johanhaleby/kubetail"
 tap "metalbear-co/mirrord"
 tap "oven-sh/bun"
+tap "sourcegraph/src-cli"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Automatic configure script builder
 brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Generic library support script
+brew "libtool"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# Command-line interface for SQLite
+brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Official Amazon AWS command-line interface
@@ -39,6 +46,8 @@ brew "bash-completion@2"
 brew "bat"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# Cross-platform make
+brew "cmake"
 # Emulator for x86 and PowerPC
 brew "qemu", args: ["HEAD"]
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -61,6 +70,10 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 # GNU Emacs text editor
 brew "emacs"
 # Command-line tool to interact with exercism.io
@@ -143,6 +156,8 @@ brew "pandoc"
 brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Object-relational database system
 brew "postgresql@13"
 # Object-relational database system
@@ -191,8 +206,6 @@ brew "tree"
 brew "vault"
 # Internet file retriever
 brew "wget"
-# Cross-platform C++ GUI toolkit
-brew "wxwidgets"
 # Linter for YAML files
 brew "yamllint"
 # Subcommands for git
@@ -213,6 +226,8 @@ brew "johanhaleby/kubetail/kubetail"
 brew "metalbear-co/mirrord/mirrord"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Sourcegraph CLI
+brew "sourcegraph/src-cli/src-cli"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Voice and text chat software
@@ -231,6 +246,10 @@ cask "insomnia"
 cask "intellij-idea-ce"
 # Code notebooks for Elixir developers
 cask "livebook"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Collaboration platform for API development
+cask "postman"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -243,9 +262,11 @@ cask "tailscale"
 cask "temurin8"
 # Open-source code editor
 cask "visual-studio-code"
+vscode "bierner.comment-tagged-templates"
 vscode "bierner.markdown-mermaid"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
+vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
 vscode "foxundermoon.shell-format"
 vscode "GitHub.copilot"
@@ -263,12 +284,16 @@ vscode "ms-python.black-formatter"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.cpptools"
 vscode "ms-vscode.makefile-tools"
-vscode "rebornix.ruby"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "Shopify.ruby-lsp"
+vscode "sourcegraph.cody-ai"
+vscode "sourcegraph.sourcegraph"
 vscode "tsandall.opa"
 vscode "unifiedjs.vscode-mdx"
+vscode "vadimcn.vscode-lldb"
 vscode "william-voyek.vscode-nginx"
-vscode "wingrunr21.vscode-ruby"
+vscode "xaver.clang-format"
+vscode "ziglang.vscode-zig"
