@@ -16,3 +16,4 @@ emacs/**/tree-sitter
 aws/.aws/credentials
 visual-studio-code/**
 colima/.colima/default/daemon/
+Brewfile.lock.json
