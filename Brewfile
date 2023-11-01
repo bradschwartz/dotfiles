@@ -30,8 +30,6 @@ brew "libtool"
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
@@ -82,6 +80,8 @@ brew "exercism"
 brew "fd"
 # Command-line tools for fly.io services
 brew "flyctl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -110,6 +110,8 @@ brew "graphviz"
 brew "groovy"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Improved top (interactive process viewer)
+brew "htop"
 # Apache HTTP server
 brew "httpd"
 # Command-line benchmarking tool
@@ -126,6 +128,8 @@ brew "kubebuilder"
 brew "kubernetes-cli"
 # Report faked system time to programs
 brew "libfaketime"
+# Utility for directing compilation
+brew "make"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
@@ -148,6 +152,8 @@ brew "nmap"
 brew "nvm"
 # Open source, general-purpose policy engine
 brew "opa"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # SDK for building Kubernetes applications
 brew "operator-sdk"
 # Swiss-army knife of markup format conversion
@@ -196,8 +202,6 @@ brew "shellcheck"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Terraform version manager inspired by rbenv
-brew "tfenv", link: false
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -210,7 +214,7 @@ brew "wget"
 brew "yamllint"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
-# Dagger is a programmable deployment system.
+# Dagger is an integrated platform to orchestrate the delivery of applications
 brew "dagger/tap/dagger"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
@@ -296,4 +300,3 @@ vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
 vscode "william-voyek.vscode-nginx"
 vscode "xaver.clang-format"
-vscode "ziglang.vscode-zig"

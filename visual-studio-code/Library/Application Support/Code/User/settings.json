@@ -81,5 +81,9 @@
     "editor.inlineSuggest.suppressSuggestions": true,
     "[typescriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "terminal.integrated.enableMultiLinePasteWarning": false
 }

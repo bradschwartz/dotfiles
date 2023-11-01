@@ -96,11 +96,12 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug \
                                --enable-smp-support \
                                --enable-threads \
                                --without-wx
-                               --with-ssl=$(brew --prefix openssl@1.1) \
+                               --with-ssl=$(brew --prefix openssl) \
                                --with-wx-config=$(brew --prefix)/bin/wx-config \
                                --without-javac \
                                --without-jinterface \
-                               --without-odbc"
+                               --without-odbc \
+                               --disable-jit"
 export KERL_BUILD_DOCS=yes
 
 # Moving to Colima caused some weird docker issues
@@ -110,3 +111,5 @@ export KERL_BUILD_DOCS=yes
 ## specifically: brew install docker-buildx docker-compose docker-credential-helper
 ## Should be set as a docker context by colima on startup:
 # export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
