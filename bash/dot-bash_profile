@@ -73,7 +73,7 @@ source <(kubectl completion bash)
 
 # Work profiles I want to keep out of git
 for file in ${HOME}/.work/*; do
-    [ -r "${file}" ] && . "${file}"
+    [ -x "${file}" ] && [ -f "${file}" ] && . "${file}"
 done
 
 # Rustland
