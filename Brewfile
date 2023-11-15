@@ -18,18 +18,22 @@ tap "oven-sh/bun"
 tap "sourcegraph/src-cli"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Companion library to apr, the Apache Portable Runtime library
+brew "apr-util"
 # Automatic configure script builder
 brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Generic library support script
-brew "libtool"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
+# Text processing system for reStructuredText
+brew "docutils"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
@@ -40,20 +44,34 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Cross-platform make
 brew "cmake"
+# Asynchronous event library
+brew "libevent"
+# Library to load and enumerate PKCS#11 modules
+brew "p11-kit"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Emulator for x86 and PowerPC
-brew "qemu", args: ["HEAD"]
+brew "qemu"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# Open source suite of directory software
+brew "openldap"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Message bus system, providing inter-application communication
 brew "dbus"
+# Platform built on V8 to build network applications
+brew "node"
 # Reference implementation for the Development Containers specification
 brew "devcontainer"
 # Tool for exploring each layer in a docker image
@@ -72,6 +90,8 @@ brew "docker-credential-helper-ecr"
 brew "wxwidgets"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
+# Language Server and Debugger for Elixir
+brew "elixir-ls"
 # GNU Emacs text editor
 brew "emacs"
 # Command-line tool to interact with exercism.io
@@ -100,10 +120,14 @@ brew "glab"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Development kit for the Java programming language
 brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Java-based scripting language
@@ -122,14 +146,16 @@ brew "inetutils"
 brew "jq"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
+# Network authentication protocol
+brew "krb5"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Report faked system time to programs
 brew "libfaketime"
-# Utility for directing compilation
-brew "make"
+# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
+brew "libfido2"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
@@ -162,8 +188,6 @@ brew "pandoc"
 brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Object-relational database system
 brew "postgresql@13"
 # Object-relational database system
@@ -234,6 +258,8 @@ brew "oven-sh/bun/bun"
 brew "sourcegraph/src-cli/src-cli"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# E-books management software
+cask "calibre"
 # Voice and text chat software
 cask "discord"
 cask "font-inconsolata-for-powerline"
@@ -244,6 +270,8 @@ cask "font-menlo-for-powerline"
 cask "font-sf-mono-for-powerline"
 # Open-source platform for visualizing and manipulating large graphs
 cask "gephi"
+# Web browser
+cask "google-chrome"
 # HTTP and GraphQL Client
 cask "insomnia"
 # IDE for Java development - community edition
@@ -254,6 +282,8 @@ cask "livebook"
 cask "monitorcontrol"
 # Collaboration platform for API development
 cask "postman"
+# Peer to peer Bitorrent client
+cask "qbittorrent"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
