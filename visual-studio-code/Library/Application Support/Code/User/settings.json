@@ -14,7 +14,7 @@
         "editor.insertSpaces": false,
         "editor.formatOnSave": false,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": false
+            "source.organizeImports": "never"
         }
     },
     "go.formatTool": "default",
