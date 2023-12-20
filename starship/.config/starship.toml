@@ -1,7 +1,7 @@
 ## https://starship.rs/config/
 
 [line_break]
-disabled = true
+disabled = false
 
 [directory]
 truncation_length = 2
@@ -28,6 +28,10 @@ deleted = "✘${count}"
 
 [docker_context]
 disabled = true
+
+[kubernetes]
+disabled = false
+format = '[$symbol$context( \($namespace\))]($style) '
 
 ## Languages
 [package]
