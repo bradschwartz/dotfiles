@@ -103,6 +103,7 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug \
                                --without-odbc \
                                --disable-jit"
 export KERL_BUILD_DOCS=yes
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 # Moving to Colima caused some weird docker issues
 # Non-standard socket location, and looks like plugins (compose, buildx, etc)
