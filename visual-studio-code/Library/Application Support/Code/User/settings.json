@@ -86,5 +86,9 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "update.showReleaseNotes": false
+    "update.showReleaseNotes": false,
+    // handles gitlab yaml !reference blocks: https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#configure-your-ide-to-support-reference-tags
+    "yaml.customTags": [
+        "!reference sequence"
+     ]
 }
