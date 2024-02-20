@@ -22,7 +22,7 @@
 	untracked = red
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[includeIf "gitdir:~/code/podium/"]
+[includeIf "hasconfig:remote.*.url:https://gitlab.podium.com/**/**"]
 	path = ~/.config/git/podium.gitconfig
 [core]
 	excludesfile = ~/.config/git/ignore
