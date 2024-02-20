@@ -70,6 +70,7 @@ export PATH="$PATH:${HOME}/.local/bin"
 eval "$(register-python-argcomplete pipx)"
 
 source <(kubectl completion bash)
+source <(mirrord completions bash)
 
 # Work profiles I want to keep out of git
 for file in ${HOME}/.work/*; do
