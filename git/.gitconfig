@@ -26,6 +26,7 @@
 	path = ~/.config/git/podium.gitconfig
 [core]
 	excludesfile = ~/.config/git/ignore
+	commentChar = ";" # This lets me do headers (#) in my markdown-style commits
 [pull]
 	rebase = false
 [init]

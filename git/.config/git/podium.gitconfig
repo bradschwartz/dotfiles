@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = brad.schwartz
+	email = brad.schwartz@podium.com
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@gitlab-ssh.podium.com:"]
+    insteadOf = https://gitlab.podium.com/
+
