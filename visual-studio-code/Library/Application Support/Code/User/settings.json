@@ -29,7 +29,6 @@
         80,
         120,
     ],
-    "editor.minimap.enabled": false,
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -90,5 +89,6 @@
     // handles gitlab yaml !reference blocks: https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#configure-your-ide-to-support-reference-tags
     "yaml.customTags": [
         "!reference sequence"
-     ]
+    ],
+    "editor.minimap.enabled": false
 }
