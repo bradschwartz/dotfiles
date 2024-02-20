@@ -38,6 +38,7 @@
 				git reset --soft \"${1}\"; \
 				git commit -am \"${rebase_msg}\"; \
 			}; squash"
+	prev-body = "log --format=format:'%b' -1"
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
