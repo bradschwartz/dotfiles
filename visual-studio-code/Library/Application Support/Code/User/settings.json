@@ -90,5 +90,6 @@
     "yaml.customTags": [
         "!reference sequence"
     ],
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "mirrord.autoUpdate": false
 }
