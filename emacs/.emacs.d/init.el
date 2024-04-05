@@ -130,3 +130,9 @@
 	:load-path "~/code/bradschwartz/devcontainer.el/"
 	:hook ((dired-before-readin . devcontainer-dir-open-hook))
 	)
+
+;; org mode
+(require 'org)
+(use-package org
+	:ensure nil
+	:hook (org-mode . org-indent-mode))
