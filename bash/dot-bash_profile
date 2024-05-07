@@ -30,6 +30,10 @@ export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 [[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
 export PATH="${HOME}/bin:${PATH}"
 
+# ASDF for more specific tool versioning using .tool-versions files
+. "$(brew --prefix asdf)/libexec/asdf.sh"
+export ASDF_SHIMS_BASE="${HOME}/.asdf/shims/"
+
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -54,7 +58,7 @@ export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # Hashicorp
-complete -C ${BREW_PREFIX}/bin/terraform terraform
+complete -C ${ASDF_SHIMS_BASE}/terraform terraform
 complete -C ${BREW_PREFIX}/bin/vault vault
 complete -C ${BREW_PREFIX}/bin/packer packer
 
@@ -84,8 +88,6 @@ if command -v rustup >/dev/null; then
     . <(rustup completions bash cargo)
 fi
 
-# ASDF for more specific tool versioning using .tool-versions files
-. "$(brew --prefix asdf)/libexec/asdf.sh"
 ## This was needed to asdf install erlang 24, specifically --without-xw
 export KERL_CONFIGURE_OPTIONS="--disable-debug \
                                --disable-hipe \
