@@ -91,5 +91,8 @@
         "!reference sequence"
     ],
     "editor.minimap.enabled": false,
-    "mirrord.autoUpdate": false
+    "mirrord.autoUpdate": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
