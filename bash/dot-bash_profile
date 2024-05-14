@@ -71,7 +71,6 @@ export AWS_PAGER=""
 
 # Created by `pipx`
 export PATH="$PATH:${HOME}/.local/bin"
-eval "$(register-python-argcomplete pipx)"
 
 source <(kubectl completion bash)
 source <(mirrord completions bash)
