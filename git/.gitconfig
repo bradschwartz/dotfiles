@@ -38,6 +38,7 @@
 				git reset --soft \"${1}\"; \
 				git commit -am \"${rebase_msg}\"; \
 			}; squash"
+	recent = "!git branch --sort=-committerdate | fzf | xargs git checkout"
 	prev-body = "log --format=format:'%b' -1"
 [filter "lfs"]
 	process = git-lfs filter-process
