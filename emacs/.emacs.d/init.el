@@ -136,3 +136,14 @@
 (use-package org
 	:ensure nil
 	:hook (org-mode . org-indent-mode))
+(with-eval-after-load 'org
+	(setq org-directory "~/org")
+	(setq org-default-notes-file (concat org-directory "/notes.org"))
+	(setq org-capture-templates
+		'(("t" "Todo" entry (file+headline "~/org/todos.org" "Tasks")
+        "* TODO %?")
+       ("j" "Journal" entry (file+datetree "~/org/journal.org")
+				 "* %?\nEntered on %U\n  %i\n  %a"))
+				 )
+	(global-set-key (kbd "C-c c") #'org-capture)
+	)
