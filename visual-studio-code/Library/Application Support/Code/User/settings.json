@@ -94,5 +94,8 @@
     "mirrord.autoUpdate": false,
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
     }
 }
