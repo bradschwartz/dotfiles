@@ -97,5 +97,6 @@
     },
     "[css]": {
         "editor.defaultFormatter": "vscode.css-language-features"
-    }
+    },
+    "github.copilot.editor.enableAutoCompletions": true
 }
