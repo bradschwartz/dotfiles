@@ -18,22 +18,18 @@ tap "oven-sh/bun"
 tap "sourcegraph/src-cli"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Companion library to apr, the Apache Portable Runtime library
-brew "apr-util"
 # Automatic configure script builder
 brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Generic library support script
+brew "libtool"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
-# C parser in Python
-brew "pycparser"
-# C Foreign Function Interface for Python
-brew "cffi"
-# Text processing system for reStructuredText
-brew "docutils"
 # Command-line interface for SQLite
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
@@ -44,28 +40,16 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
-# C library implementing the SSH2 protocol
-brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Cross-platform make
 brew "cmake"
-# Asynchronous event library
-brew "libevent"
-# Library to load and enumerate PKCS#11 modules
-brew "p11-kit"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# Emulator for x86 and PowerPC
+# Generic machine emulator and virtualizer
 brew "qemu"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
-# Open source suite of directory software
-brew "openldap"
-# Tool for downloading RTMP streaming media
-brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Message bus system, providing inter-application communication
@@ -120,14 +104,10 @@ brew "glab"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Development kit for the Java programming language
 brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
-# Library to render SVG files using Cairo
-brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Java-based scripting language
@@ -146,16 +126,20 @@ brew "inetutils"
 brew "jq"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
-# Network authentication protocol
-brew "krb5"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Open-source distributed event streaming platform
+brew "kafka"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
 # Report faked system time to programs
 brew "libfaketime"
-# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
-brew "libfido2"
+# Utility for directing compilation
+brew "make"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
@@ -180,14 +164,16 @@ brew "nvm"
 brew "opa"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# SDK for building Kubernetes applications
-brew "operator-sdk"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Shell command parallelization utility
+brew "parallel"
 # Python dependency management tool
 brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Object-relational database system
 brew "postgresql@13"
 # Object-relational database system
@@ -215,7 +201,7 @@ brew "rsync"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
 # Login and retrieve AWS temporary credentials using a SAML IDP
 brew "saml2aws"
 # Database of common MIME types
@@ -226,12 +212,22 @@ brew "shellcheck"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Vulnerability scanner for container images, file systems, and Git repos
+brew "trivy"
 # Secures, stores, and tightly controls access to secrets
 brew "vault"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "vcluster"
+# Disaster recovery for Kubernetes resources and persistent volumes
+brew "velero"
+# Command-line client for WebSockets
+brew "websocat"
 # Internet file retriever
 brew "wget"
 # Linter for YAML files
@@ -240,12 +236,8 @@ brew "yamllint"
 brew "bradschwartz/tap/git-subcommands"
 # Dagger is an integrated platform to orchestrate the delivery of applications
 brew "dagger/tap/dagger"
-# Kubernetes CLI To Manage Your Clusters In Style!
-brew "derailed/k9s/k9s"
 # Development engine for Kubernetes
-brew "garden-io/garden/garden-cli"
-# Boundary
-brew "hashicorp/tap/boundary"
+brew "garden-io/garden/garden-cli@0.12"
 # Terraform Language Server
 brew "hashicorp/tap/terraform-ls"
 # Tail logs from multiple Kubernetes pods at the same time
@@ -260,18 +252,20 @@ brew "sourcegraph/src-cli/src-cli"
 cask "adoptopenjdk"
 # E-books management software
 cask "calibre"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
+# Web browser
+cask "firefox@developer-edition"
 cask "font-inconsolata-for-powerline"
-# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
 cask "font-menlo-for-powerline"
-# Apple's SF Mono font patched with the Nerd Fonts patcher for Powerline support
 cask "font-sf-mono-for-powerline"
 # Open-source platform for visualizing and manipulating large graphs
 cask "gephi"
-# Web browser
-cask "google-chrome"
+# Vector graphics editor
+cask "inkscape"
 # HTTP and GraphQL Client
 cask "insomnia"
 # IDE for Java development - community edition
@@ -288,41 +282,56 @@ cask "qbittorrent"
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
 # Video game digital distribution service
 cask "steam"
-# Mesh VPN based on Wireguard
+# Mesh VPN based on WireGuard
 cask "tailscale"
 # JDK from the Eclipse Foundation (Adoptium)
-cask "temurin8"
+cask "temurin@8"
 # Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
+# View output from scripts in the menu bar
+cask "xbar"
+# Multiplayer code editor
+cask "zed"
 vscode "bierner.comment-tagged-templates"
 vscode "bierner.markdown-mermaid"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "foxundermoon.shell-format"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
-vscode "GitLab.gitlab-workflow"
+vscode "gitlab.gitlab-workflow"
+vscode "gleam.gleam"
 vscode "golang.go"
-vscode "GraphQL.vscode-graphql"
-vscode "GraphQL.vscode-graphql-syntax"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-syntax"
 vscode "hashicorp.terraform"
-vscode "JakeBecker.elixir-ls"
+vscode "jakebecker.elixir-ls"
 vscode "jasonnutter.vscode-codeowners"
+vscode "marp-team.marp-vscode"
+vscode "mechatroner.rainbow-csv"
+vscode "metalbear.mirrord"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.makefile-tools"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
-vscode "Shopify.ruby-lsp"
+vscode "shopify.ruby-lsp"
 vscode "sourcegraph.cody-ai"
 vscode "sourcegraph.sourcegraph"
 vscode "tsandall.opa"
