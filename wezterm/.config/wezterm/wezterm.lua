@@ -78,8 +78,14 @@ config.keys = {
 		mods = 'CMD',
 		key = 'k',
 		action = wezterm.action.ClearScrollback 'ScrollbackAndViewport'
-	}
+	},
+	-- move tabs around. shift + option key on mac
+	{ key = '{', mods = 'SHIFT|ALT', action = wezterm.action.MoveTabRelative(-1) },
+	{ key = '}', mods = 'SHIFT|ALT', action = wezterm.action.MoveTabRelative(1) },
 }
+
+-- How many lines of scrollback you want to retain per tab
+config.scrollback_lines = 10000
 
 -- and finally, return the configuration to wezterm
 return config
