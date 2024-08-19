@@ -79,6 +79,7 @@
 
 (use-package terraform-mode) ;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
 (use-package elixir-ts-mode) ;; lsp was installed with `brew install elixir-ls`
+(use-package lua-mode) ;; used for wezterm config mainly
 
 ;; tree-sitter is built-in in emacs@29
 ;; using Rob's package for autosetting grammar repos, and handling major-mode-remap-alist

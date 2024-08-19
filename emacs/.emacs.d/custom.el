@@ -85,7 +85,7 @@
 				 (null-device . "/dev/null"))))
  '(org-agenda-files '("~/org/"))
  '(package-selected-packages
-		'(yaml-mode treesit hcl-mode treesit-auto try markdown-preview-mode markdown-mode editorconfig magit package-lint rust-mode terraform-mode docker-tramp devcontainer paredit lsp-mode go-mode company use-package)))
+		'(lua-mode yaml-mode treesit hcl-mode treesit-auto try markdown-preview-mode markdown-mode editorconfig magit package-lint rust-mode terraform-mode docker-tramp devcontainer paredit lsp-mode go-mode company use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
