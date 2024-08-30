@@ -85,10 +85,11 @@
 				 (null-device . "/dev/null"))))
  '(org-agenda-files '("~/org/"))
  '(package-selected-packages
-		'(lua-mode yaml-mode treesit hcl-mode treesit-auto try markdown-preview-mode markdown-mode editorconfig magit package-lint rust-mode terraform-mode docker-tramp devcontainer paredit lsp-mode go-mode company use-package)))
+		'(elixir-ts-mode lua-mode yaml-mode treesit hcl-mode treesit-auto try markdown-preview-mode markdown-mode editorconfig magit package-lint rust-mode terraform-mode docker-tramp devcontainer paredit lsp-mode go-mode company use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(menu ((t (:inverse-video t))))
+ '(mode-line ((t (:background "gray75" :foreground "darkslategray" :box (:line-width (1 . -1) :style released-button))))))
