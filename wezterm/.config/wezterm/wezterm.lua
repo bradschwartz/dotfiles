@@ -61,7 +61,24 @@ wezterm.on(
 )
 
 
+-- mouse bindings
+-- https://wezfurlong.org/wezterm/config/mouse.html
+config.disable_default_mouse_bindings = false
+config.mouse_bindings = {
+	-- this is so copy doesn't happen on highlight
+	{
+		event = { Up = { streak = 1, button = 'Left' } },
+		mods = 'NONE',
+		action = wezterm.action.Nop
+	},
+	{
+		event = { Up = { streak = 2, button = 'Left' } },
+		mods = 'NONE',
+		action = wezterm.action.Nop
+	}
+}
 
+-- keyDisableDefaultAssignmentbindings
 config.keys = {
 	-- disable ctrl+ - for emacs to use for undo
 	{
@@ -86,6 +103,10 @@ config.keys = {
 
 -- How many lines of scrollback you want to retain per tab
 config.scrollback_lines = 100000
+
+-- Don't close on command exit
+config.exit_behavior = 'Hold'
+config.exit_behavior_messaging = 'Brief'
 
 -- and finally, return the configuration to wezterm
 return config
