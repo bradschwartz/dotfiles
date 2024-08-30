@@ -65,17 +65,23 @@ wezterm.on(
 -- https://wezfurlong.org/wezterm/config/mouse.html
 config.disable_default_mouse_bindings = false
 config.mouse_bindings = {
-	-- this is so copy doesn't happen on highlight
+	-- only allowed to open links, not copy selection
 	{
 		event = { Up = { streak = 1, button = 'Left' } },
 		mods = 'NONE',
-		action = wezterm.action.Nop
+		action = wezterm.action.OpenLinkAtMouseCursor
 	},
+	-- this is so copy doesn't happen on highlight when i double/triple click
 	{
 		event = { Up = { streak = 2, button = 'Left' } },
 		mods = 'NONE',
 		action = wezterm.action.Nop
-	}
+	},
+	{
+    event = { Up = { streak = 3, button = 'Left' } },
+    mods = 'NONE',
+    action = wezterm.action.Nop
+  }
 }
 
 -- keyDisableDefaultAssignmentbindings
