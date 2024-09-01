@@ -39,10 +39,7 @@
 
 
 ;; using `use-package` to ensure all packages I want are installed
-;; Globally allow `use-package` to always install if not available
-;; This _must_ come first before any other package references/configurations
-;; Auto install use-package directly from ELPA if needed, otherwise it handles everything
-(unless (package-installed-p 'use-package) (package-install 'use-package))
+;; use-package is now a built-in as of emacs29!
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
@@ -79,6 +76,7 @@
 
 (use-package terraform-mode) ;; lsp was installed with `brew install hashicorp/tap/terraform-ls`
 (use-package elixir-ts-mode) ;; lsp was installed with `brew install elixir-ls`
+(use-package lua-mode) ;; used for wezterm config mainly
 
 ;; tree-sitter is built-in in emacs@29
 ;; using Rob's package for autosetting grammar repos, and handling major-mode-remap-alist
