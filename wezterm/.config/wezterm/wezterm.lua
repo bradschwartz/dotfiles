@@ -105,6 +105,14 @@ config.keys = {
 	-- move tabs around. shift + option key on mac
 	{ key = '{', mods = 'SHIFT|ALT', action = wezterm.action.MoveTabRelative(-1) },
 	{ key = '}', mods = 'SHIFT|ALT', action = wezterm.action.MoveTabRelative(1) },
+	 {
+		 key =  "a",
+		 mods = "CMD",
+		 action = wezterm.action_callback(function(window, pane)
+				 local selected = pane:get_lines_as_text(pane:get_dimensions().scrollback_rows)
+				 window:copy_to_clipboard(selected, 'Clipboard')
+		 end)
+	 },
 }
 
 -- How many lines of scrollback you want to retain per tab
@@ -113,6 +121,11 @@ config.scrollback_lines = 100000
 -- Don't close on command exit
 config.exit_behavior = 'Hold'
 config.exit_behavior_messaging = 'Brief'
+
+-- ligatures suck
+-- wezterm docs: https://wezfurlong.org/wezterm/config/font-shaping.html#advanced-font-shaping-options
+-- https://harfbuzz.github.io/opentype-shaping-models.html <- had to use this for default
+config.harfbuzz_features = { 'default=0', 'calt=0', 'clig=0', 'liga=0' }
 
 -- and finally, return the configuration to wezterm
 return config
