@@ -127,5 +127,7 @@ config.exit_behavior_messaging = 'Brief'
 -- https://harfbuzz.github.io/opentype-shaping-models.html <- had to use this for default
 config.harfbuzz_features = { 'default=0', 'calt=0', 'clig=0', 'liga=0' }
 
+config.enable_scroll_bar = true
+
 -- and finally, return the configuration to wezterm
 return config
