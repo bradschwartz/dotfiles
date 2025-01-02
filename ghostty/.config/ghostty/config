@@ -1,0 +1,2 @@
+theme = light:CLRS,dark:JetBrains Darcula
+wait-after-command = true
