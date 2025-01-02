@@ -13,9 +13,11 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "johanhaleby/kubetail"
+tap "launchdarkly/tap"
 tap "metalbear-co/mirrord"
 tap "oven-sh/bun"
 tap "sourcegraph/src-cli"
+tap "synchronal/tap"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Automatic configure script builder
@@ -32,8 +34,6 @@ brew "asdf"
 brew "aspell"
 # Command-line interface for SQLite
 brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -46,8 +46,6 @@ brew "bat"
 brew "caddy"
 # Cross-platform make
 brew "cmake"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -92,8 +90,6 @@ brew "gcc"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Tool Command Language
-brew "tcl-tk"
 # Tcl/Tk UI for the git revision control system
 brew "git-gui"
 # Git extension for versioning large files
@@ -114,6 +110,8 @@ brew "graphviz"
 brew "groovy"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Apache HTTP server
@@ -124,6 +122,8 @@ brew "hyperfine"
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -138,6 +138,8 @@ brew "kubernetes-cli"
 brew "kubectx"
 # Report faked system time to programs
 brew "libfaketime"
+# Scalable user load testing tool written in Python
+brew "locust"
 # Utility for directing compilation
 brew "make"
 # Java-based project management
@@ -146,6 +148,8 @@ brew "maven"
 brew "maven-completion"
 # Elixir Mix completion plus shortcuts/colors
 brew "mix-completion"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # General-purpose lossless data-compression library
 brew "zlib"
 # Open source relational database management system
@@ -172,14 +176,12 @@ brew "parallel"
 brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Object-relational database system
 brew "postgresql@13"
 # Object-relational database system
 brew "postgresql@14"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Show ps output as a tree
 brew "pstree"
 # Python version management
@@ -187,11 +189,17 @@ brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
 # Command-line YAML and XML processor that wraps jq
-brew "python-yq"
+brew "python-yq", link: false
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
 brew "rbenv"
+# Erlang build tool
+brew "rebar3"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Search tool like grep and The Silver Searcher
@@ -204,6 +212,8 @@ brew "rust-analyzer"
 brew "rustup"
 # Login and retrieve AWS temporary credentials using a SAML IDP
 brew "saml2aws"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
 # Database of common MIME types
 brew "shared-mime-info"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -212,6 +222,8 @@ brew "shellcheck"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Tool Command Language
+brew "tcl-tk"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
 # Terminal multiplexer
@@ -220,18 +232,26 @@ brew "tmux"
 brew "tree"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Secures, stores, and tightly controls access to secrets
 brew "vault"
-# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
-brew "vcluster"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
+# Simple terminal image viewer written in Rust
+brew "viu"
 # Command-line client for WebSockets
 brew "websocat"
+# WebSockets the Unix way
+brew "websocketd"
 # Internet file retriever
 brew "wget"
 # Linter for YAML files
 brew "yamllint"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Kubectl Argo Rollouts Plugin.
+brew "argoproj/tap/kubectl-argo-rollouts"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
 # Dagger is an integrated platform to orchestrate the delivery of applications
@@ -242,16 +262,24 @@ brew "garden-io/garden/garden-cli@0.12"
 brew "hashicorp/tap/terraform-ls"
 # Tail logs from multiple Kubernetes pods at the same time
 brew "johanhaleby/kubetail/kubetail"
+# Job for finding and sending feature flag code references to LaunchDarkly
+brew "launchdarkly/tap/ld-find-code-refs"
 # Connect your local process and your cloud environment
 brew "metalbear-co/mirrord/mirrord"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # Sourcegraph CLI
 brew "sourcegraph/src-cli/src-cli"
+# Daily Diff
+brew "synchronal/tap/dyd"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# Tools for building Android applications
+cask "android-studio"
 # E-books management software
 cask "calibre"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Voice and text chat software
@@ -264,6 +292,8 @@ cask "font-menlo-for-powerline"
 cask "font-sf-mono-for-powerline"
 # Open-source platform for visualizing and manipulating large graphs
 cask "gephi"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Vector graphics editor
 cask "inkscape"
 # HTTP and GraphQL Client
@@ -274,6 +304,8 @@ cask "intellij-idea-ce"
 cask "livebook"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Client-side GUI application for modern database development and operations
+cask "nosql-workbench"
 # Collaboration platform for API development
 cask "postman"
 # Peer to peer Bitorrent client
@@ -296,8 +328,6 @@ cask "visual-studio-code"
 cask "wezterm"
 # View output from scripts in the menu bar
 cask "xbar"
-# Multiplayer code editor
-cask "zed"
 vscode "bierner.comment-tagged-templates"
 vscode "bierner.markdown-mermaid"
 vscode "dbaeumer.vscode-eslint"
