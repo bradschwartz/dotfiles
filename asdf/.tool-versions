@@ -7,3 +7,4 @@ nodejs 20.11.0
 helm system
 erlang system
 elixir system
+stern system
