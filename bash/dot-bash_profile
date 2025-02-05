@@ -31,7 +31,7 @@ export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 export PATH="${HOME}/bin:${PATH}"
 
 # ASDF for more specific tool versioning using .tool-versions files
-. "$(brew --prefix asdf)/libexec/asdf.sh"
+source <(asdf completion bash)
 export ASDF_SHIMS_BASE="${HOME}/.asdf/shims/"
 
 # Java settings
