@@ -33,6 +33,7 @@ export PATH="${HOME}/bin:${PATH}"
 # ASDF for more specific tool versioning using .tool-versions files
 source <(asdf completion bash)
 export ASDF_SHIMS_BASE="${HOME}/.asdf/shims/"
+export PATH="${ASDF_SHIMS_BASE}:${PATH}"
 
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
