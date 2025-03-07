@@ -30,11 +30,6 @@ export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 [[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
 export PATH="${HOME}/bin:${PATH}"
 
-# ASDF for more specific tool versioning using .tool-versions files
-source <(asdf completion bash)
-export ASDF_SHIMS_BASE="${HOME}/.asdf/shims/"
-export PATH="${ASDF_SHIMS_BASE}:${PATH}"
-
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
@@ -46,7 +41,7 @@ eval "$(rbenv init - bash)"
 export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
 [[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
 for COMPLETION in "${BREW_PREFIX}/etc/bash_completion.d/"*; do
-    [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+	[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
 done
 
 # Homebrew
@@ -59,7 +54,7 @@ export GOENV=$HOME/.config/go/env
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # Hashicorp
-complete -C ${ASDF_SHIMS_BASE}/terraform terraform
+complete -C ${BREW_PREFIX}/terraform terraform
 complete -C ${BREW_PREFIX}/bin/vault vault
 complete -C ${BREW_PREFIX}/bin/packer packer
 
@@ -78,14 +73,14 @@ source <(mirrord completions bash)
 
 # Work profiles I want to keep out of git
 for file in ${HOME}/.work/*; do
-    [ -x "${file}" ] && [ -f "${file}" ] && . "${file}"
+	[ -x "${file}" ] && [ -f "${file}" ] && . "${file}"
 done
 
 # Rustland
 [[ -r "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
 if command -v rustup >/dev/null; then
-    . <(rustup completions bash)
-    . <(rustup completions bash cargo)
+	. <(rustup completions bash)
+	. <(rustup completions bash cargo)
 fi
 
 ## This was needed to asdf install erlang 24, specifically --without-xw
@@ -98,7 +93,7 @@ export KERL_CONFIGURE_OPTIONS="--disable-debug \
                                --enable-shared-zlib \
                                --enable-smp-support \
                                --enable-threads \
-                               --without-wx
+                               --without-wx \
                                --with-ssl=$(brew --prefix openssl) \
                                --with-wx-config=$(brew --prefix)/bin/wx-config \
                                --with-odbc=$(brew --prefix unixodbc) \
@@ -117,3 +112,9 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# ASDF for more specific tool versioning using .tool-versions files
+# Leave at bottom so it doesn't override other completions during shell startup
+source <(asdf completion bash)
+export ASDF_SHIMS_BASE="${HOME}/.asdf/shims/"
+export PATH="${ASDF_SHIMS_BASE}:${PATH}"

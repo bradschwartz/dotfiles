@@ -1,7 +1,5 @@
-python system
-kubectl system
-jq system
-golang 1.20.6
+python 3.13.0
+golang 1.22.1
 java adoptopenjdk-11.0.21+9
 nodejs 20.11.0
 helm system
