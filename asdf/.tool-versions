@@ -5,6 +5,6 @@ golang 1.20.6
 java adoptopenjdk-11.0.21+9
 nodejs 20.11.0
 helm system
-erlang system
-elixir system
+erlang 27.2
+elixir 1.18.1
 stern system
