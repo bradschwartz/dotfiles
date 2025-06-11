@@ -1,6 +1,8 @@
+
 theme = light:CLRS,dark:JetBrains Darcula
 wait-after-command = true
-keybind = ctrl+minus=text:\x1f # required to get `ctrl+_` to work properly for undo. See: https://discord.com/channels/1005603569187160125/1327394001653075968/1327394001653075968
+# required to get `ctrl+_` to work properly for undo. See: https://discord.com/channels/1005603569187160125/1327394001653075968/1327394001653075968
+keybind = ctrl+minus=text:\x1f
 clipboard-paste-protection = false
 
 # Disable Ghostty built-in tab title shell integration
