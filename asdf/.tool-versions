@@ -6,3 +6,4 @@ helm system
 erlang 27.2
 elixir 1.18.1
 stern system
+uv 0.7.10
