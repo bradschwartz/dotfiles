@@ -21,8 +21,6 @@ export VIEWER="${EDITOR}"
 
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_CONFIG_FILE=$HOME/.pip.conf
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 

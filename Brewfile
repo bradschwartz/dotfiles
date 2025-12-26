@@ -8,8 +8,6 @@ tap "garden-io/garden"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "johanhaleby/kubetail"
@@ -20,18 +18,16 @@ tap "sourcegraph/src-cli"
 tap "synchronal/tap"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# Generic library support script
-brew "libtool"
+# Companion library to apr, the Apache Portable Runtime library
+brew "apr-util"
+# Distributed revision control system
+brew "git"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
+# Automatic configure script builder
+brew "autoconf"
 # Command-line interface for SQLite
 brew "sqlite"
 # Official Amazon AWS command-line interface
@@ -40,22 +36,36 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
 # Cross-platform make
 brew "cmake"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Network authentication protocol
+brew "krb5"
 # Message bus system, providing inter-application communication
 brew "dbus"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Reference implementation for the Development Containers specification
 brew "devcontainer"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Tool for exploring each layer in a docker image
 brew "dive"
 # Pack, ship and run any application as a lightweight container
@@ -68,56 +78,74 @@ brew "docker-compose"
 brew "docker-credential-helper"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
-# Cross-platform C++ GUI toolkit
-brew "wxwidgets"
+# Text processing system for reStructuredText
+brew "docutils"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
 # Language Server and Debugger for Elixir
 brew "elixir-ls"
+# Asynchronous event library
+brew "libevent"
+# Library to load and enumerate PKCS#11 modules
+brew "p11-kit"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # GNU Emacs text editor
 brew "emacs"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Development kit for the Java programming language
+brew "openjdk"
+# LLVM bytecode to JavaScript compiler
+brew "emscripten"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line tools for fly.io services
 brew "flyctl"
+# Monitor a directory for changes and run a shell command
+brew "fswatch"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
-# Distributed revision control system
-brew "git"
+# Tool Command Language
+brew "tcl-tk"
 # Tcl/Tk UI for the git revision control system
 brew "git-gui"
 # Git extension for versioning large files
 brew "git-lfs"
 # Open-source GitLab command-line tool
 brew "glab"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# Command-driven, interactive function plotting
+brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Development kit for the Java programming language
-brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Java-based scripting language
 brew "groovy"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
-# Kubernetes package manager
-brew "helm"
+# System/370, ESA/390 and z/Architecture Emulator
+brew "hercules"
 # Improved top (interactive process viewer)
 brew "htop"
 # Apache HTTP server
 brew "httpd"
 # Command-line benchmarking tool
 brew "hyperfine"
+# Database of common MIME types
+brew "shared-mime-info"
 # GNU utilities for networking
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
@@ -126,8 +154,6 @@ brew "jq"
 brew "just"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
-# Kubernetes CLI To Manage Your Clusters In Style!
-brew "k9s"
 # Open-source distributed event streaming platform
 brew "kafka"
 # SDK for building Kubernetes APIs using CRDs
@@ -136,12 +162,16 @@ brew "kubebuilder"
 brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Build tool for sending feature flag code references to LaunchDarkly
+brew "ld-find-code-refs"
 # Report faked system time to programs
 brew "libfaketime"
+# Provides library functionality for FIDO U2F & FIDO 2.0, including USB
+brew "libfido2"
+# JIT library for the GNU compiler collection
+brew "libgccjit"
 # Scalable user load testing tool written in Python
 brew "locust"
-# Utility for directing compilation
-brew "make"
 # Java-based project management
 brew "maven"
 # Bash completion for Maven
@@ -166,8 +196,12 @@ brew "nmap"
 brew "nvm"
 # Open source, general-purpose policy engine
 brew "opa"
+# Open source suite of directory software
+brew "openldap"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
+# SDK for building Kubernetes applications
+brew "operator-sdk"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Shell command parallelization utility
@@ -176,18 +210,12 @@ brew "parallel"
 brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Object-relational database system
 brew "postgresql@13"
 # Object-relational database system
 brew "postgresql@14"
 # Show ps output as a tree
 brew "pstree"
-# Python version management
-brew "pyenv"
-# Pyenv plugin to manage virtualenv
-brew "pyenv-virtualenv"
 # Command-line YAML and XML processor that wraps jq
 brew "python-yq", link: false
 # Interpreted, interactive, object-oriented programming language
@@ -214,18 +242,16 @@ brew "rustup"
 brew "saml2aws"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
-# Database of common MIME types
-brew "shared-mime-info"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Tool Command Language
-brew "tcl-tk"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
+# Terraform Language Server
+brew "terraform-ls"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -234,8 +260,8 @@ brew "tree"
 brew "trivy"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
-# Secures, stores, and tightly controls access to secrets
-brew "vault"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "vcluster"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
 # Simple terminal image viewer written in Rust
@@ -246,6 +272,8 @@ brew "websocat"
 brew "websocketd"
 # Internet file retriever
 brew "wget"
+# Cross-platform C++ GUI toolkit
+brew "wxwidgets"
 # Linter for YAML files
 brew "yamllint"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -254,16 +282,22 @@ brew "yq"
 brew "argoproj/tap/kubectl-argo-rollouts"
 # Subcommands for git
 brew "bradschwartz/tap/git-subcommands"
+# GNU Emacs text editor
+brew "d12frosted/emacs-plus/emacs-plus@30", args: ["with-dbus", "with-imagemagick"], link: false
 # Dagger is an integrated platform to orchestrate the delivery of applications
 brew "dagger/tap/dagger"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
+# Development engine for Kubernetes
+brew "garden-io/garden/garden-cli", link: false
 # Development engine for Kubernetes
 brew "garden-io/garden/garden-cli@0.12"
-# Terraform Language Server
-brew "hashicorp/tap/terraform-ls"
+# Boundary
+brew "hashicorp/tap/boundary"
+# Vault
+brew "hashicorp/tap/vault"
 # Tail logs from multiple Kubernetes pods at the same time
 brew "johanhaleby/kubetail/kubetail"
-# Job for finding and sending feature flag code references to LaunchDarkly
-brew "launchdarkly/tap/ld-find-code-refs"
 # Connect your local process and your cloud environment
 brew "metalbear-co/mirrord/mirrord"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
@@ -278,6 +312,8 @@ cask "adoptopenjdk"
 cask "android-studio"
 # E-books management software
 cask "calibre"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Universal database tool and SQL client
@@ -294,6 +330,8 @@ cask "font-sf-mono-for-powerline"
 cask "gephi"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
+cask "google-chrome"
 # Vector graphics editor
 cask "inkscape"
 # HTTP and GraphQL Client
@@ -304,8 +342,12 @@ cask "intellij-idea-ce"
 cask "livebook"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# VPN client
+cask "mullvad-vpn"
 # Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Collaboration platform for API development
 cask "postman"
 # Peer to peer Bitorrent client
@@ -319,7 +361,7 @@ cask "session-manager-plugin"
 # Video game digital distribution service
 cask "steam"
 # Mesh VPN based on WireGuard
-cask "tailscale"
+cask "tailscale-app"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@8"
 # Open-source code editor
@@ -328,6 +370,10 @@ cask "visual-studio-code"
 cask "wezterm"
 # View output from scripts in the menu bar
 cask "xbar"
+# Multiplayer code editor
+cask "zed"
+# Video communication and virtual meeting platform
+cask "zoom"
 vscode "bierner.comment-tagged-templates"
 vscode "bierner.markdown-mermaid"
 vscode "dbaeumer.vscode-eslint"
@@ -349,11 +395,13 @@ vscode "jasonnutter.vscode-codeowners"
 vscode "marp-team.marp-vscode"
 vscode "mechatroner.rainbow-csv"
 vscode "metalbear.mirrord"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.makefile-tools"
@@ -369,3 +417,5 @@ vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
 vscode "william-voyek.vscode-nginx"
 vscode "xaver.clang-format"
+cargo "cargo-shuttle"
+cargo "inlyne"

@@ -58,5 +58,9 @@ chsh -s $(which bash)
 Brewfile is generated using:
 
 ```bash
+# Ensure asdf is available (needed because asdf shims require asdf to be in PATH)
+export PATH="/opt/homebrew/bin:$PATH"
 brew bundle dump --all --verbose --force --describe
 ```
+
+**Note:** The `export PATH` line is needed because `brew bundle dump` runs in a non-interactive shell that doesn't source your bash profile. The asdf shims (like `go`) require `asdf` to be in PATH to function properly.
