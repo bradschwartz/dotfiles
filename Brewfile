@@ -222,10 +222,6 @@ brew "python-yq", link: false
 brew "python@3.11"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
 # Erlang build tool
 brew "rebar3"
 # Persistent key-value database, with built-in net interface

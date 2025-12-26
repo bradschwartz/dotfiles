@@ -31,9 +31,6 @@ export PATH="${HOME}/bin:${PATH}"
 # Java settings
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-# Ruby
-eval "$(rbenv init - bash)"
-
 # Bash
 # https://stackoverflow.com/a/14970926
 export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
