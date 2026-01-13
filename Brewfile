@@ -306,6 +306,8 @@ brew "synchronal/tap/dyd"
 cask "adoptopenjdk"
 # Tools for building Android applications
 cask "android-studio"
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
+cask "basictex"
 # E-books management software
 cask "calibre"
 # Terminal-based AI coding assistant
@@ -362,8 +364,6 @@ cask "tailscale-app"
 cask "temurin@8"
 # Open-source code editor
 cask "visual-studio-code"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
-cask "wezterm"
 # View output from scripts in the menu bar
 cask "xbar"
 # Multiplayer code editor
