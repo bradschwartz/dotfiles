@@ -2,7 +2,6 @@
 
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
-export BREW_PREFIX=$(brew --prefix)
 
 # System Variables
 stty -ixon # Forward bash search
@@ -22,23 +21,20 @@ export VIEWER="${EDITOR}"
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_CONFIG_FILE=$HOME/.pip.conf
 
-export PATH="${BREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="${HOMEBREW_PREFIX}/sbin:$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # Source necessary files
 [[ -e "$HOME/.aliases" ]] && . "$HOME/.aliases"
 export PATH="${HOME}/bin:${PATH}"
 
 # Java settings
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# Hardcoding for performance reasons, instead of using: /usr/libexec/java_home -v 1.8
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home"
 
 # Bash
 # https://stackoverflow.com/a/14970926
-export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
-[[ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${BREW_PREFIX}/etc/profile.d/bash_completion.sh"
-for COMPLETION in "${BREW_PREFIX}/etc/bash_completion.d/"*; do
-	[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
-done
-
+export BASH_COMPLETION_COMPAT_DIR="${HOMEBREW_PREFIX}/etc/bash_completion.d"
+[[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 # Homebrew
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ANALYTICS=1
@@ -46,15 +42,19 @@ export HOMEBREW_BAT=1
 
 # Golang
 export GOENV=$HOME/.config/go/env
-export PATH=$PATH:$(go env GOPATH)/bin
+# go env GOPATH is slow, so we're hardcoding the path
+export GOPATH="${HOME}/go"
+export PATH=$PATH:"${GOPATH}/bin"
 
 # Hashicorp
-complete -C ${BREW_PREFIX}/terraform terraform
-complete -C ${BREW_PREFIX}/bin/vault vault
-complete -C ${BREW_PREFIX}/bin/packer packer
+complete -C ${HOMEBREW_PREFIX}/terraform terraform
+complete -C ${HOMEBREW_PREFIX}/bin/vault vault
+complete -C ${HOMEBREW_PREFIX}/bin/packer packer
 
-eval "$(ssh-agent -s)" >/dev/null 2>&1
-ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1
+if [ -z ${SSH_AUTH_SOCK} ]; then
+    eval "$(ssh-agent -s)" >/dev/null 2>&1
+    ssh-add ~/.ssh/id_ed25519 >/dev/null 2>&1
+fi
 
 # AWS
 ## awscli v2 paginates by default, disable
