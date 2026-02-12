@@ -52,12 +52,8 @@ brew "cmake"
 brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Tool for downloading RTMP streaming media
-brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Network authentication protocol
-brew "krb5"
 # Message bus system, providing inter-application communication
 brew "dbus"
 # Open-source, cross-platform JavaScript runtime environment
@@ -156,6 +152,8 @@ brew "just"
 brew "k6"
 # Open-source distributed event streaming platform
 brew "kafka"
+# Network authentication protocol
+brew "krb5"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
 # Kubernetes command-line interface
@@ -230,6 +228,8 @@ brew "redis"
 brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
 # Experimental Rust compiler front-end for IDEs
 brew "rust-analyzer"
 # Rust toolchain installer
@@ -284,10 +284,6 @@ brew "d12frosted/emacs-plus/emacs-plus@30", args: ["with-dbus", "with-imagemagic
 brew "dagger/tap/dagger"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
-# Development engine for Kubernetes
-brew "garden-io/garden/garden-cli", link: false
-# Development engine for Kubernetes
-brew "garden-io/garden/garden-cli@0.12"
 # Boundary
 brew "hashicorp/tap/boundary"
 # Vault
@@ -318,8 +314,6 @@ cask "cursor"
 cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
-# Web browser
-cask "firefox@developer-edition"
 cask "font-inconsolata-for-powerline"
 cask "font-iosevka"
 cask "font-menlo-for-powerline"
@@ -346,6 +340,8 @@ cask "mullvad-vpn"
 cask "nosql-workbench"
 # App to write, plan, collaborate, and get organised
 cask "notion"
+# Identity verification provider
+cask "okta-verify"
 # Collaboration platform for API development
 cask "postman"
 # Peer to peer Bitorrent client
@@ -356,6 +352,10 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
+# Instant messaging application focusing on security
+cask "signal"
+# Team communication and collaboration software
+cask "slack"
 # Video game digital distribution service
 cask "steam"
 # Mesh VPN based on WireGuard
@@ -376,6 +376,7 @@ vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "expert-lsp.expert"
 vscode "foxundermoon.shell-format"
 vscode "github.copilot"
 vscode "github.copilot-chat"
