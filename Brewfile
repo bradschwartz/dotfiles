@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 tap "argoproj/tap"
 tap "bradschwartz/tap", "https://github.com/bradschwartz/homebrew-tap.git"
 tap "cue-lang/tap"
@@ -274,6 +275,8 @@ brew "wxwidgets"
 brew "yamllint"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Kubectl Argo Rollouts Plugin.
 brew "argoproj/tap/kubectl-argo-rollouts"
 # Subcommands for git
@@ -360,6 +363,10 @@ cask "slack"
 cask "steam"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin@25"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@8"
 # Open-source code editor
@@ -414,5 +421,7 @@ vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
 vscode "william-voyek.vscode-nginx"
 vscode "xaver.clang-format"
+go "github.com/posener/complete/v2/gocomplete"
+go "golang.org/x/tools/gopls"
 cargo "cargo-shuttle"
 cargo "inlyne"
