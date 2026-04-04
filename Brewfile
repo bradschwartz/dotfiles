@@ -303,8 +303,6 @@ brew "sourcegraph/src-cli/src-cli"
 brew "synchronal/tap/dyd"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
-# Tools for building Android applications
-cask "android-studio"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
 # E-books management software
