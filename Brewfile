@@ -5,6 +5,7 @@ tap "cue-lang/tap"
 tap "d12frosted/emacs-plus"
 tap "dagger/tap"
 tap "derailed/k9s"
+tap "fluxcd/tap"
 tap "garden-io/garden"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
@@ -17,20 +18,26 @@ tap "metalbear-co/mirrord"
 tap "oven-sh/bun"
 tap "sourcegraph/src-cli"
 tap "synchronal/tap"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Command-line interface for SQLite
+brew "sqlite"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
-# Distributed revision control system
-brew "git"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Automatic configure script builder
 brew "autoconf"
-# Command-line interface for SQLite
-brew "sqlite"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -43,10 +50,6 @@ brew "libssh2"
 brew "bat"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# C parser in Python
-brew "pycparser"
-# C Foreign Function Interface for Python
-brew "cffi"
 # Cross-platform make
 brew "cmake"
 # Container runtimes on MacOS (and Linux) with minimal setup
@@ -81,10 +84,10 @@ brew "docutils"
 brew "elixir"
 # Language Server and Debugger for Elixir
 brew "elixir-ls"
-# Asynchronous event library
-brew "libevent"
 # Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
+# Asynchronous event library
+brew "libevent"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Emacs text editor
@@ -109,6 +112,8 @@ brew "fzf"
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
 # Tool Command Language
 brew "tcl-tk"
 # Tcl/Tk UI for the git revision control system
@@ -123,6 +128,8 @@ brew "gnupg"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Deliver Go binaries as fast and easily as possible
+brew "goreleaser"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Library to render SVG files using Cairo
@@ -141,8 +148,6 @@ brew "htop"
 brew "httpd"
 # Command-line benchmarking tool
 brew "hyperfine"
-# Database of common MIME types
-brew "shared-mime-info"
 # GNU utilities for networking
 brew "inetutils"
 # Lightweight and flexible command-line JSON processor
@@ -157,10 +162,12 @@ brew "kafka"
 brew "krb5"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
 # Build tool for sending feature flag code references to LaunchDarkly
 brew "ld-find-code-refs"
 # Report faked system time to programs
@@ -177,10 +184,10 @@ brew "maven"
 brew "maven-completion"
 # Elixir Mix completion plus shortcuts/colors
 brew "mix-completion"
+# Deep clean and optimize your Mac
+brew "mole"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# General-purpose lossless data-compression library
-brew "zlib"
 # Open source relational database management system
 brew "mysql"
 # NCurses Disk Usage
@@ -210,13 +217,11 @@ brew "pipenv"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Object-relational database system
-brew "postgresql@13"
-# Object-relational database system
-brew "postgresql@14"
+brew "postgresql@18", link: true
 # Show ps output as a tree
 brew "pstree"
 # Command-line YAML and XML processor that wraps jq
-brew "python-yq", link: false
+brew "python-yq"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Generic machine emulator and virtualizer
@@ -237,10 +242,14 @@ brew "rust-analyzer"
 brew "rustup"
 # Login and retrieve AWS temporary credentials using a SAML IDP
 brew "saml2aws"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
+# Database of common MIME types
+brew "shared-mime-info"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Small command-line utility for adding spacers to command output
+brew "spacer"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -251,8 +260,6 @@ brew "tealdeer"
 brew "terraform-ls"
 # Terminal multiplexer
 brew "tmux"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Vulnerability scanner for container images, file systems, and Git repos
 brew "trivy"
 # Extremely fast Python package installer and resolver, written in Rust
@@ -273,10 +280,12 @@ brew "wget"
 brew "wxwidgets"
 # Linter for YAML files
 brew "yamllint"
-# Process YAML, JSON, XML, CSV and properties documents from the CLI
-brew "yq"
+# Rust-first autonomous agent runtime
+brew "zeroclaw"
+# General-purpose lossless data-compression library
+brew "zlib"
 # The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
+brew "anomalyco/tap/opencode", trusted: true
 # Kubectl Argo Rollouts Plugin.
 brew "argoproj/tap/kubectl-argo-rollouts"
 # Subcommands for git
@@ -287,8 +296,12 @@ brew "d12frosted/emacs-plus/emacs-plus@30", args: ["with-dbus", "with-imagemagic
 brew "dagger/tap/dagger"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
+# Flux CLI
+brew "fluxcd/tap/flux", trusted: true
 # Boundary
 brew "hashicorp/tap/boundary"
+# Terraform
+brew "hashicorp/tap/terraform"
 # Vault
 brew "hashicorp/tap/vault"
 # Tail logs from multiple Kubernetes pods at the same time
@@ -301,7 +314,6 @@ brew "oven-sh/bun/bun"
 brew "sourcegraph/src-cli/src-cli"
 # Daily Diff
 brew "synchronal/tap/dyd"
-# JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
@@ -345,8 +357,6 @@ cask "notion"
 cask "okta-verify"
 # Collaboration platform for API development
 cask "postman"
-# Peer to peer Bitorrent client
-cask "qbittorrent"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -367,6 +377,8 @@ cask "telegram"
 cask "temurin@25"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin@8"
+# Open-source BitTorrent client
+cask "transmission"
 # Open-source code editor
 cask "visual-studio-code"
 # View output from scripts in the menu bar
@@ -421,5 +433,3 @@ vscode "william-voyek.vscode-nginx"
 vscode "xaver.clang-format"
 go "github.com/posener/complete/v2/gocomplete"
 go "golang.org/x/tools/gopls"
-cargo "cargo-shuttle"
-cargo "inlyne"
