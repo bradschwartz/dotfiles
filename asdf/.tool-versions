@@ -1,7 +1,7 @@
 python 3.13.0
 golang 1.27.0
 java adoptopenjdk-11.0.21+9
-nodejs 20.11.0
+nodejs 26.10.0
 helm system
 erlang 28.0.2
 elixir 1.18.4
